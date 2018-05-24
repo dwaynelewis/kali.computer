@@ -148,6 +148,7 @@ h3#opening{
     display: block;
    margin-left: auto;
    margin-right: auto;
+   color: darkred;
   }
   #ques1{
     display: none;
@@ -331,7 +332,7 @@ h3#opening{
 .topnav {
   position: relative;
   overflow: hidden;
-  background-color:#4682B4;
+  background-color:inherit;
 }
 
 .topnav a {
@@ -349,7 +350,7 @@ h3#opening{
 }
 
 .topnav a.active {
-  background-color: #4682B4;
+  background-color:inherit;
   color:white;
   border-radius: 25%;
 }
@@ -406,7 +407,6 @@ h3#opening{
       <div class="loading-container">
       <div class="spinner"></div>
       <div class="spinner-center"></div>
-      <div class="loading-text">Loading...</div>
     </div>
   </div>
 
@@ -563,7 +563,7 @@ h3#opening{
       $(document).ready(function(){
           $(function(){
 
-              $("#intro").delay(2000).fadeOut("slow");
+              $("#intro").delay(1000).fadeOut("slow");
 
            });
        });
@@ -572,7 +572,7 @@ h3#opening{
       $(document).ready(function(){
           $(function(){
 
-              $("#outro").delay(2500).fadeIn("slow");
+              $("#outro").delay(1500).fadeIn("slow");
           });
       });
       </script>
