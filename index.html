@@ -11,6 +11,7 @@
  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
  	<link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+   <script src="jquery.bubble.text.js"></script>
 <title>KALI demo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -29,6 +30,28 @@ body, html {
 
 #outro{
   display:none;
+}
+
+
+.video-container video {
+display: block;
+width: 100%;
+}
+
+.video-container {
+margin: 40px auto;
+outline: 1px solid #dadada;
+&:nth-of-type(1) { width: 25%; } /* first video instance, and so on */
+&:nth-of-type(2) { width: 50%; }
+&:nth-of-type(3) { width: 75%; }
+&:nth-of-type(4) { width: 100%; }
+}
+
+#bubble {
+font-size: 2rem;
+margin: auto;
+font-weight: bold;
+text-shadow: 1px 1px red;
 }
 
 	@media screen and (max-width: 450px){
@@ -140,17 +163,6 @@ font-family: Arial;
   display: none;
 }
 
-#name{
-  position: absolute;
-  top:41%;
-  left:14%;
-  font-family: 'Anton', sans-serif;
-  -webkit-animation-duration: .75s;
-  -webkit-animation-delay: 0s;
-  -webkit-animation-iteration-count: 3;
-   text-shadow: 2px 4px red;
-}
-
 
 
 }
@@ -250,21 +262,9 @@ width: 20%;
   display: none;
 }
 
-#name{
-  position: absolute;
-  color:white;
-  top:41%;
-  left:35%;
-  font-size: 5rem;
-  font-family: 'Anton', sans-serif;
-  -webkit-animation-duration: .75s;
-  -webkit-animation-delay: 0s;
-  -webkit-animation-iteration-count: 3;
-   text-shadow: 2px 4px red;
-}
 
 #intro{
-  background-color:#0e194c;
+
   height: 100%;
 }
 
@@ -278,7 +278,32 @@ width: 20%;
 
 
 <div id="intro">
-	<h1 id="name" class= "intro animated zoomIn">DWAYNE R. LEWIS</h1>
+
+
+  <div class="video-container">
+  	<video loop autoplay muted playsinline>
+  		<source src="christian.webm" type="video/webm">
+  			<source src="christian.mp4" type="video/mp4">
+  			<source src="christian.ogg" type="video/ogg">
+  	</video>
+  </div>
+
+
+  <div class="bubblehold" style="position:absolute; top:50%; left:20%; ">
+  <div id="bubble" style="align-self: center;">KALI D.M.A.</div><br>
+  </div>
+
+
+
+  <!-- <a href="index.html" style="">HOME</a> -->
+
+
+
+
+
+
+
+
 </div>
 
 <div id="outro" style="height:100%;">
@@ -302,12 +327,37 @@ width: 20%;
 </div>
 </div>
 
+  <script>
+  $(document).ready(function() {
+  var $element = $('#bubble');
+  var phrases = [
+      'digital branding',
+      'websites',
+      'mobile apps',
+      'commercials',
+      'social media',
+
+  ];
+  var index = -1;
+  (function loopAnimation() {
+      index = (index + 1) % phrases.length;
+      bubbleText({
+          element: $element,
+          newText: phrases[index],
+          letterSpeed: 70,
+          callback: function() {
+              setTimeout(loopAnimation, 2000);
+          },
+      });
+  })();
+  });
+  </script>
 
 	<script> //INTRO
 $(document).ready(function(){
     $(function(){
 
-        $("#intro").delay(3000).fadeOut("slow");
+        $("#intro").delay(15000).fadeOut("slow");
 
      });
  });
@@ -316,7 +366,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $(function(){
 
-        $("#outro").delay(3500).fadeIn("slow");
+        $("#outro").delay(15500).fadeIn("slow");
     });
 });
 </script>
