@@ -62,9 +62,10 @@ span{
    position: absolute;
    top:25%;
    left:0;
-   width: 18%;
+   width: 22%;
    height: 7%;
    text-align: center;
+   padding-top: 10px;
 }
 
 .overlay {
@@ -74,8 +75,8 @@ span{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
+    background-color:white;
+    opacity: .8;
     overflow-x: hidden;
     transition: 0.5s;
 }
@@ -92,7 +93,7 @@ span{
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
-    color: #818181;
+    color: #992F76;
     display: block;
     transition: 0.3s;
 }
@@ -138,7 +139,7 @@ body{
 
 #autoplay{
   position: absolute;
-  top: 45%;
+  top: 42%;
   left:10%;
   width: 25%;
 }
@@ -152,7 +153,7 @@ body{
 
     		color:white;
         position: absolute;
-   top:15%;
+   top:12%;
    left: 8%;
 
 
@@ -301,13 +302,13 @@ body{
 <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
+    <a href="aboutus.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
   </div>
 </div>
 
-<span style="font-size:24px;" onclick="openNav()">enter</span>
+<span style="font-size:24px;" onclick="openNav()">menu</span>
 
 
 </div>
