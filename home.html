@@ -11,6 +11,12 @@
 <script type="text/javascript" src="textition.js"></script>
 <style>
 
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -24,8 +30,6 @@
 
 body{
   position: relative;
-  text-shadow: .5px .5px black;
-
 }
 
 img {
@@ -51,11 +55,69 @@ height: 100vh;
 
 }
 
-a{
-  text-decoration: line-through;
-  color: #b80000;
+
+span{
+  color: white;
+   background-color: #69D2FA;
+   position: absolute;
+   top:25%;
+   left:0;
+   width: 23%;
+   height: 7%;
+   text-align: center;
+   padding-top: 10px;
 }
 
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:white;
+    opacity: .8;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+     font-size: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #992F76;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #484DBF;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+
+}
 
 
 
@@ -64,115 +126,178 @@ a{
 <style>
 
 
-
 	@media screen and (max-width: 450px){
 
 body{
-   background: linear-gradient(to bottom,#bdb76b 0%, #00CED1 100%);
+   /* background: linear-gradient(to bottom,#18399a 0%, #4dd2ff 100%); */
+
 }
+span{
+  top:26%;
+  left:0%;
+   width: 28%;
+  color: white;
+   background-color: #69D2FA;
+   position: absolute;
+   text-align: center;
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+
+
+
+#autoplay{
+  position: absolute;
+  top: 9%;
+  left:5%;
+  width: 25%;
+  font-size: 36px;
+}
+
     	.textef{
     		width: 300px;
     		height: 21px;
     		text-align: center;
     		/* margin-right: 10px;
     		margin-top: 100px; */
-        text-shadow: .5px .5px black;
-    		color: white;
-        position: fixed;
-   top:45%;
-   left: 10%;
 
+    		color: #484DBF;
     	}
 
 
       img {
-      margin-left: auto;
-      margin-right: auto;
-          height: 10vh;
-          width: 35vw;
+          height: 8vh;
+          width: 30vw;
           position: absolute;
-          top:99%;
-          left:21%;
+          top:-49%;
+          left:60%;
+           background-color: #F7F8FA;
       }
-      h2{
+
+
+      .bg {
+          /* The image used */
+          background-image: url("digi.jpg");
+
+          /* Full height */
+          height: 100%;
+
+          /* Center and scale the image nicely */
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
+      #sub{
         position: absolute;
-        top:146%;
-        left:-3%;
-        width:300px;
-          color: #b80000;
+        top:15%;
+        left:5%;
       }
-}
+
+
+    }
 
 	@media screen and (min-width: 450px){
 
     body{
-       background: linear-gradient(to bottom,white 0%, #00CED1 100%);
-         text-shadow: .5px .5px white;
+      height: 100%;
     }
+
+
+.bg {
+    /* The image used */
+    background-image: url("digi.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#autoplay{
+  position: absolute;
+  top: -6.5%;
+  left:12%;
+  width: 25%;
+}
 
 	.textef{
 		width: 75%;
 		height: 21px;
 		text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
 		margin-top: 100px;
-	  font-size: 24px;
-		color:#b0a94f;
-      text-shadow: .5px .5px white;
-      top:40%;
-      left: 10%;
-
-	}
+	  font-size: 36px;
+		color:#69D2FA;
+    }
 
   img {
   margin-left: auto;
   margin-right: auto;
-      height: 11vh;
+      height: 14vh;
       width: 16vw;
       position: absolute;
-      top:26%;
-      left:36%;
+      top:2%;
+      left:23%;
   }
-  h2{
-    position:absolute;
-    top:75%;
-    left:36%;
-      color: #b80000;
+
+  #sub{
+    position: absolute;
+    top:4.5%;
+    left:13%;
+    background-color: #F8F9FB;
+    margin: 0;
+    padding: 0;
+    width: 380px;
   }
 }
+
 </style>
 </head>
 <body>
-<main>
-<a href="aboutus.html" class="intro animated rotateInDownLeft" style="position: absolute; top:5%; left: 5%;">-ABOUT US-</a>
-<a href="clients.html" class="intro animated rotateInDownRight" style="position: absolute; top:5%; right: 5%;">-CLIENTS-</a>
-<a href="services.html" class="intro animated bounceInUp" style="position: absolute; top:60%; left: 5%;">-FAQ-</a>
-<a href="contact.html" class="intro animated bounceInUp" style="position: absolute; top:60%; right: 5%;">-CONTACT-</a>
+
+<div class="bg">
+
 
 
 <div id="sub">
-  <img class="intro animated zoomInDown" src="kalilogor.png" alt="Kali logo">
-  <h2>PERSONAL BRAND SITE</h2>
+  <img class="intro animated zoomInDown" src="kalilogo.png" alt="Kali logo">
 
 
 
 
 
+</div>
 
 <div id="autoplay" style="height: 1px; color:purple; ">
 
  
 
- <div class="textef" style="margin-left: auto; margin-right: auto;">pitch 1</div>
+ <div class="textef" style="margin-left: auto; margin-right: auto;">PITCH 1</div>
 
- <div class="textef" style="margin-left: auto; margin-right: auto;">pitch 2</div>
+ <div class="textef" style="margin-left: auto; margin-right: auto;">PITCH 2</div>
 
-<div class="textef" style="margin-left: auto; margin-right: auto;">pitch 3</div>
+<div class="textef" style="margin-left: auto; margin-right: auto;">PITCH 3</div>
 
 </div>
+
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="aboutus.html">ABOUT</a>
+    <a href="services.html">SERVICES</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
 </div>
-</main>
+
+<span style="font-size:24px;" onclick="openNav()">MENU</span>
+
+
+</div>
 
 <script>
 $('#autoplay').delay(11000).textition({
@@ -189,7 +314,18 @@ $('#autoplay').delay(11000).textition({
 
 })
 </script>
-<script type="text/javascript" src="textition.js"></script>
+
+
+<script>
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
 
 
 

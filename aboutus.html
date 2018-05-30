@@ -65,8 +65,8 @@ margin: auto;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
+    background-color: white;
+  opacity: .8;
     overflow-x: hidden;
     transition: 0.5s;
 }
@@ -83,13 +83,13 @@ margin: auto;
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
-    color: white;
+    color:red;
     display: block;
     transition: 0.3s;
 }
 
 .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
+    color:purple;
 }
 
 .overlay .closebtn {
@@ -111,8 +111,19 @@ margin: auto;
 
 @media screen and (max-width: 450px){
 .bubblehold{
-  top:16%;
+  top:20%;
    left:32%;
+
+  color:#c868e1;
+}
+
+span{
+  position: absolute;
+  top: 13%;
+  left:45%;
+  font-size:30px;
+  cursor:pointer;
+  color:#6895E1;
 }
 }
     </style>
@@ -143,7 +154,7 @@ margin: auto;
   </div>
 </div>
 
-<span style="position: absolute; top: 50%; left:0;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; menu</span>
+<span  onclick="openNav()">&#9776;</span>
 
 <script>
 function openNav() {
