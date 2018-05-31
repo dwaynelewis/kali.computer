@@ -9,6 +9,54 @@
   <script type="text/javascript" src="textition.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 <script type="text/javascript" src="textition.js"></script>
+
+
+
+  <style>
+
+  @keyframes spinner {
+    100% {
+      transform: rotate(3600deg);
+    }
+  }
+
+  .loading-container {
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 50vh;
+    transform: translateY(-50%);
+  }
+
+  .spinner {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: url('http://i.imgur.com/oSHLAzp.png') center center;
+    background-size: contain;
+    transition-origin: 50% 50%;
+    animation: spinner 3s infinite alternate ease-in-out;
+  }
+  .spinner-center {
+    display: inline-block;
+    position: absolute;
+    margin-left: -100px;
+    width: 100px;
+    height: 100px;
+    background: url('http://i.imgur.com/u0BC2ZR.png') center center;
+    background-size: contain;
+    content: '';
+  }
+
+
+  #outro{
+    display: none;
+    height: 100%;
+    width: 100%;
+  }
+</style>
+
+
 <style>
 
 
@@ -218,13 +266,13 @@ span{
 
 #autoplay{
   position: absolute;
-  top: -6.5%;
-  left:12%;
-  width: 25%;
+  top: 8.5%;
+  left:21%;
+  width: 100%;
 }
 
 	.textef{
-		width: 75%;
+		width: 200px;;
 		height: 21px;
 		text-align: center;
     /* margin-left: auto; */
@@ -259,6 +307,18 @@ span{
 </head>
 <body>
 
+  <div id="intro">
+
+      <div class="loading-container">
+      <div class="spinner"></div>
+      <div class="spinner-center"></div>
+
+    </div>
+  </div>
+
+
+
+  <div id="outro">
 <div class="bg">
 
 
@@ -272,15 +332,15 @@ span{
 
 </div>
 
-<div id="autoplay" style="height: 1px; color:purple; ">
+<div id="autoplay" style="height: 1px; ">
 
  
 
- <div class="textef" style="margin-left: auto; margin-right: auto;">PITCH 1</div>
+ <div class="textef" >PITCH 1</div>
 
- <div class="textef" style="margin-left: auto; margin-right: auto;">PITCH 2</div>
+ <div class="textef" >PITCH 2</div>
 
-<div class="textef" style="margin-left: auto; margin-right: auto;">PITCH 3</div>
+<div class="textef" ></div>
 
 </div>
 
@@ -299,6 +359,26 @@ span{
 
 
 </div>
+</div>
+
+
+  	<script> //INTRO
+  $(document).ready(function(){
+      $(function(){
+
+          $("#intro").delay(1000).fadeOut("slow");
+
+       });
+   });
+   </script>
+   <script>
+  $(document).ready(function(){
+      $(function(){
+
+          $("#outro").delay(1500).fadeIn("slow");
+      });
+  });
+  </script>
 
 <script>
 $('#autoplay').delay(11000).textition({
