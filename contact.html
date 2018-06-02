@@ -1,278 +1,297 @@
-<!DOCTYPE html>
 <html>
-
 <head>
-	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-	<script src="jquery.bubble.text.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="utf-8">
 
-    <title>CONTACT</title>
 
-		<style>
-    *{
-      font-family: 'Anton', sans-serif;
-    }
-		body{
-			height: 100%;
-			background-color:black;
-		}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    .email{
-      position: absolute;
-      margin-top:11.5rem;
-      text-align: center;
-      width: 100%;
-			color:;
-    }
-		.num{
-			position: absolute;
-			  margin-top:21.5rem;
-			width: 100%;
-			text-align: center;
-			color:;
-		}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+      	<script src="jquery.bubble.text.js"></script>
+<title>"KALI"</title>
+
+
+<style>
+
+
+
+body{
+   -webkit-align-items: center;
+  text-align: center;
+  align-items: center;
+  background-color: #B00000;
+}
 
 span{
-	top:0;
-	left:0;
-	width: 100%;
-	text-align: center;
-
-	color:red ;
-	font-size: 24px;
+  position: absolute;
+  top:0;
+  left: 0;
 }
 
-
-	.linear-container1 {
-	  width: 150%;
-	  margin-top: 10rem;
-	  border: 1px solid black;
-	  position: fixed;
-	}
-
-
-		.linear-container2 {
-		  width: 150%;
-		  margin-top: 20rem;
-		  border: 1px solid black;
-		  position: fixed;
-		}
-		.linear-container3 {
-		  width: 150%;
-		  margin-top: 30rem;
-		  border: 1px solid black;
-		  position: fixed;
-		}
-		.linear-container4 {
-		  width: 150%;
-		  margin-top: 40rem;
-		  border: 1px solid black;
-		  position: fixed;
-		}
-
-.overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color:white;
-    /* background-color: rgba(0,0,0, 0.9); */
-    overflow-x: hidden;
-    transition: 0.5s;
-}
-.overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-}
-.overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color:red;
-    display: block;
-    transition: 0.3s;
-}
-.overlay a:hover, .overlay a:focus {
-    color: purple;
-}
-.overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-}
-
-@media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
+  @keyframes spinner {
+    100% {
+      transform: rotate(3600deg);
+    }
   }
+
+  .loading-container {
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 50vh;
+    transform: translateY(-50%);
+
+  }
+
+  .spinner {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: url('http://i.imgur.com/oSHLAzp.png') center center;
+    background-size: contain;
+    transition-origin: 50% 50%;
+    animation: spinner 3s infinite alternate ease-in-out;
+  }
+  .spinner-center {
+    display: inline-block;
+    position: absolute;
+    margin-left: -100px;
+    width: 100px;
+    height: 100px;
+    background: url('http://i.imgur.com/u0BC2ZR.png') center center;
+    background-size: contain;
+    content: '';
+  }
+
+  #intro{
+    height: 1500px;
+    background-color: white;
+  }
+
+
+  #outro{
+    display: none;
+            /* The image used */
+            background-image: url("blue.jpg");
+
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+
+  .overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0, 0.9);
+      overflow-x: hidden;
+      transition: 0.5s;
+  }
+
+  .overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+  }
+
+  .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: red;
+      display: block;
+      transition: 0.3s;
+  }
+
+  .overlay a:hover, .overlay a:focus {
+      color: #f1f1f1;
+  }
+
+  .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+  }
+
+
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
+
+
+
+	@media screen and (max-width: 1100px){
+
+    .bubblehold {
+      font-size: 24px;
+    }
+
+
+		a{
+		background-color: black;
+		opacity: .9;
+		color: white;
+		border-radius: 10px;
+		width: 120px;
+		height: 44px;
+		font-size: .75em;
+		text-align: center;
+		font-size: 200%
+		}
+		a:hover{
+
+		}
+
+    .video-container video {
+  display: block;
+  width: 100%;
 }
 
+.video-container {
+  position: absolute;
+  top:15rem;
+  /* outline: 1px solid #dadada; */
+  &:nth-of-type(1) { width: 25%; } /* first video instance, and so on */
+  &:nth-of-type(2) { width: 50%; }
+  &:nth-of-type(3) { width: 75%; }
+  &:nth-of-type(4) { width: 100%; }
+}
+
+.br{
+  position: absolute;
+  top:55%;
+  left:2%;
+  font-size: 4rem;
+  color: white;
+}
+
+#bubble {
+  font-size: 1rem;
+margin: auto;
+  font-weight: bold;
+  font-family: 'Dosis', sans-serif;
+}
+
+#logom{
+  position: absolute;
+  top:24%;
+  left: 38%;
+    height: 17vh;
+    width:28vw;
+    visibility: visible;
+    z-index: 1;
+}
+
+}
+    </style>
+
+    <style>
+    @media screen and (min-width: 1100px){
+    .br{
+      position: absolute;
+      top:129%;
+      left:2%;
+      font-size: 7rem;
+      color: white;
+    }
 
 
+    #logom{
+      position: absolute;
+      top:19%;
+      left: 5%;
+        height: 20vh;
+        width:28vw;
+        visibility: visible;
+        z-index: 1;
+    }
 
-* {
-		margin: 0 auto;
-		border: 0;
-		padding: 0;
-		box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-	}
+    span{
+    	top:0;
+    	left:0;
+    	width: 100%;
+    	text-align: center;
 
-	body {
+    	color:white ;
+    	font-size: 24px;
+    }
+  }
 
-	}
-
-
-	.linear {
-		height: 5rem;
-	  width: 300%;
-	  /***  CSS Gradient  ***/
-	  /*  Chrome 1-9 and Safari 4-5.0  */
-	  background-image: -webkit-gradient(linear, left top, right top,
-	        color-stop( 0.0, rgb(255, 0, 0) ),
-	        color-stop( 0.168, rgb(146, 213, 0) ),
-	        color-stop( 0.336, rgb(0, 213, 197) ),
-	        color-stop( 0.502, rgb(213, 0, 196) ),
-	        color-stop( 0.669, rgb(255, 0, 0) ),
-	        color-stop( 0.834, rgb(146, 213, 0) ),
-	        color-stop( 1.0, rgb(0, 213, 197) ));
-
-	  /*  Chrome 10+ Safari 5.1+ Mobile Safari  */
-	  background-image: -webkit-linear-gradient(left,
-	        rgb(255, 0, 0),
-	        rgb(146, 213, 0) 16.8%,
-	        rgb(0, 213, 197) 33.6%,
-	        rgb(213, 0, 196) 50.2%,
-	        rgb(255, 0, 0) 66.9%,
-	        rgb(146, 213, 0) 83.4%,
-	        rgb(0, 213, 197) );
-
-	  /*  Firefox 3.6+  */
-	  background-image: -moz-linear-gradient(left,
-	        rgb(255, 0, 0),
-	        rgb(146, 213, 0) 16.8%,
-	        rgb(0, 213, 197) 33.6%,
-	        rgb(213, 0, 196) 50.2%,
-	        rgb(255, 0, 0) 66.9%,
-	        rgb(146, 213, 0) 83.4%,
-	        rgb(0, 213, 197) );
-
-	  /*  IE 10+  */
-	  background-image: -ms-linear-gradient(left,
-	        rgb(255, 0, 0),
-	        rgb(146, 213, 0) 16.8%,
-	        rgb(0, 213, 197) 33.6%,
-	        rgb(213, 0, 196) 50.2%,
-	        rgb(255, 0, 0) 66.9%,
-	        rgb(146, 213, 0) 83.4%,
-	        rgb(0, 213, 197) );
-
-	  /*  Opera 11.10+  */
-	  background-image: -o-linear-gradient(left,
-	        rgb(255, 0, 0),
-	        rgb(146, 213, 0) 16.8%,
-	        rgb(0, 213, 197) 33.6%,
-	        rgb(213, 0, 196) 50.2%,
-	        rgb(255, 0, 0) 66.9%,
-	        rgb(146, 213, 0) 83.4%,
-	        rgb(0, 213, 197) );
-
-	  /*  W3C  */
-	  background-image: linear-gradient(left,
-	        rgb(255, 0, 0),
-	        rgb(146, 213, 0) 16.8%,
-	        rgb(0, 213, 197) 33.6%,
-	        rgb(213, 0, 196) 50.2%,
-	        rgb(255, 0, 0) 66.9%,
-	        rgb(146, 213, 0) 83.4%,
-	        rgb(0, 213, 197) );
-
-	  -webkit-animation: moving_line_jquery 4s linear infinite reverse;
-	          animation: moving_line_jquery 4s linear infinite reverse;
-
-	}
-
-	@-webkit-keyframes moving_line_jquery { to { margin-left: -210%; } from {margin-left: -10%; } }
-	        @keyframes moving_line_jquery { to { margin-left: -210%; } from {margin-left: -10%; } }
-
-</style>
-
+    </style>
 </head>
-
 <body>
 
-	<div class="linear-container1">
-	<div class="linear">
+
+    <div id="intro">
+
+        <div class="loading-container">
+        <div class="spinner"></div>
+        <div class="spinner-center"></div>
+
+      </div>
+    </div>
+
+    <div id="outro">
 
 
-	</div>
-	</div>
 
-	<div class="email"><h2>H E L L O @ K A L I . D I G I T A L</h2></div>
+      <img id="logom" src="kalilogor.png" class="intro animated zoomInDown" alt="Kali logo">
 
 
-				<div class="linear-container2">
-				<div class="linear">
+<div class="video-container">
+  <video loop autoplay muted playsinline>
+    <source src="office.webm" type="video/webm">
+      <source src="office.mp4" type="video/mp4">
+      <source src="office.ogg" type="video/ogg">
+  </video>
+
+  <h2 class="br"> brand</h2>
+<!--
+<div class="bubblehold">
+<div id="bubble" style="align-self: center;"></div><br>
+</div> -->
+
+</div>
 
 
-				</div>
-				</div>
-
-					<div class="num"><h2>9 1 7 4 6 3 7 3 0 3</h2></div>
-
-					<div class="linear-container3">
-					<div class="linear">
-
-
-					</div>
-					</div>
-
-					<div class="linear-container4">
-					<div class="linear">
-
-
-					</div>
-					</div>
-
-
-</body>
-
-</html>
-
+</div>
 
 <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
-    <a href="aboutus.html">ABOUT</a>
-    <a href="services.html">SERVICES</a>
-		<a href="clients.html">CLIENTS</a>
-    <a href="home.html">HOME</a>
+    <a href="aboutus.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="clients.html">Clients</a>
+      <a href="home.html">Home</a>
   </div>
 </div>
 
-<span style="cursor:pointer; position:absolute;" onclick="openNav()">&#9776; MENU</span>
-
-
-
-
+<span style="font-size:30px;cursor:pointer;position: absolute; color:white;" onclick="openNav()">&#9776;</span>
 
 <script>
 function openNav() {
     document.getElementById("myNav").style.width = "100%";
 }
+
 function closeNav() {
     document.getElementById("myNav").style.width = "0%";
 }
@@ -280,5 +299,52 @@ function closeNav() {
 
 
 
+
+  	<script> //INTRO
+  $(document).ready(function(){
+      $(function(){
+
+          $("#intro").delay(1000).fadeOut("slow");
+
+       });
+   });
+   </script>
+   <script>
+  $(document).ready(function(){
+      $(function(){
+
+          $("#outro").delay(1500).fadeIn("slow");
+      });
+  });
+  </script>
+
+
+  <script>
+  $(document).ready(function() {
+      var $element = $('#bubble');
+      var phrases = [
+          'branding',
+          'websites',
+          'mobile apps',
+          'commercials',
+          'vip service',
+
+      ];
+      var index = -1;
+      (function loopAnimation() {
+          index = (index + 1) % phrases.length;
+          bubbleText({
+              element: $element,
+              newText: phrases[index],
+              letterSpeed: 70,
+              callback: function() {
+                  setTimeout(loopAnimation, 2000);
+              },
+          });
+      })();
+  });
+  </script>
+
+
+
 </body>
-</html>

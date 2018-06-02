@@ -9,10 +9,26 @@
   <script type="text/javascript" src="textition.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 <script type="text/javascript" src="textition.js"></script>
+<style>
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-animation-duration: 3s;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-iteration-count: 1;
+    font-family: 'Anton', sans-serif;
 
+}
 
-  <style>
+body, html {
+    height: 100%;
+    margin: 0;
+  position: relative;
+  background-color: white;
+}
+
 
   @keyframes spinner {
     100% {
@@ -48,46 +64,6 @@
     content: '';
   }
 
-
-  #outro{
-    display: none;
-    height: 100%;
-    width: 100%;
-  }
-</style>
-
-
-<style>
-
-
-body, html {
-    height: 100%;
-    margin: 0;
-}
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-animation-duration: 3s;
-    -webkit-animation-delay: 1s;
-    -webkit-animation-iteration-count: 1;
-    font-family: 'Anton', sans-serif;
-
-}
-
-body{
-  position: relative;
-}
-
-img {
-margin-left: auto;
-margin-right: auto;
-    height: 5vh;
-    width: 10vw;
-
-
-}
 main{
 height: 100vh;
 }
@@ -103,74 +79,35 @@ height: 100vh;
 
 }
 
-
-span{
-  color: white;
-   background-color: #69D2FA;
-   position: absolute;
-   top:25%;
-   left:0;
-   width: 23%;
-   height: 7%;
-   text-align: center;
-   padding-top: 10px;
-
-   -webkit-animation-duration: 3s;
-   -webkit-animation-delay: 0s;
-   -webkit-animation-iteration-count: 1;
+a{
+  text-decoration: line-through;
 }
 
-.overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color:white;
-    opacity: .8;
-    overflow-x: hidden;
-    transition: 0.5s;
+#autoplay{
+  position: absolute;
 }
 
-.overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-     font-size: 30px;
+#intro{
+  height: 100rem;
+        text-align: center;
+background-color: white;
+            }
+
+
+#outro{
+  display: none;
 }
 
-.overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #992F76;
-    display: block;
-    transition: 0.3s;
-}
+#sun{
+          display: block;
+         text-align: center;
+         text-decoration: none;
+         -webkit-animation-duration: 2s;
+         -webkit-animation-delay: 2s;
+         -webkit-animation-iteration-count: 1;
+         width: 100%;
 
-.overlay a:hover, .overlay a:focus {
-    color: #484DBF;
-}
-
-.overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-}
-
-@media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
-
-}
-
+        }
 
 
 </style>
@@ -178,196 +115,167 @@ span{
 <style>
 
 
+
 	@media screen and (max-width: 450px){
 
-body{
-   /* background: linear-gradient(to bottom,#18399a 0%, #4dd2ff 100%); */
 
-}
-span{
-  top:26%;
-  left:0%;
-   width: 28%;
-  color: white;
-   background-color: #69D2FA;
-   position: absolute;
-   text-align: center;
-   padding-top: 10px;
-   padding-bottom: 10px;
-}
+    #outro{
+        /* The image used */
+        background-image: url("blue.jpg");
+
+        /* Full height */
+        height: 100%;
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
 
+      #logom{
+      margin-left: auto;
+      margin-right: auto;
+          height: 10vh;
+          width: 16vw;
+          position: absolute;
+          top:32%;
+          left:42%;
 
-
-#autoplay{
-  position: absolute;
-  top: 12%;
-  left:5%;
-  width: 25%;
-
-}
+      }
 
     	.textef{
     		width: 300px;
-    		height: 16px;
+    		height: 21px;
     		text-align: center;
     		/* margin-right: 10px;
     		margin-top: 100px; */
-          font-size: 24px;
-    		color: #F7F8FA;
-    	}
+        text-shadow: .5px .5px black;
+    		color: white;
+        position: fixed;
+   top:45%;
+   left: 10%;
+}
 
 
-      img {
-          height: 8vh;
-          width: 30vw;
-          position: absolute;
-          top:-49%;
-          left:60%;
-           background-color: #F7F8FA;
-      }
 
-
-      .bg {
-          /* The image used */
-          background-image: url("digi.jpg");
-
-          /* Full height */
-          height: 100%;
-
-          /* Center and scale the image nicely */
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-      }
-      #sub{
+      #pb{
         position: absolute;
-        top:15%;
-        left:5%;
+        top:42%;
+        left:24%;
+        width:300px;
+          color: white;
+
       }
-
-
-    }
+      a{
+        color:white;
+      }
+      #autoplay{
+        top:48%;
+        left:8%;
+      }
+}
 
 	@media screen and (min-width: 450px){
 
     body{
-      height: 100%;
+       background: linear-gradient(to bottom,white 0%, #2B2F3F 100%);
+
     }
 
 
-.bg {
-    /* The image used */
-    background-image: url("digi.jpg");
 
-    /* Full height */
-    height: 100%;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#autoplay{
-  position: absolute;
-  top: 8.5%;
-  left:21%;
-  width: 100%;
-}
+    #autoplay{
+      top:85%;
+      left:41%;
+    }
 
 	.textef{
-		width: 200px;;
+		width: 75%;
 		height: 21px;
 		text-align: center;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
+    margin-left: auto;
+    margin-right: auto;
 		margin-top: 100px;
-	  font-size: 36px;
-		color:#69D2FA;
-    }
+	  font-size: 24px;
+		color:white;
 
-  img {
+      top:40%;
+      left: 10%;
+
+	}
+
+  #logom{
   margin-left: auto;
   margin-right: auto;
-      height: 14vh;
+      height: 18vh;
       width: 16vw;
       position: absolute;
-      top:2%;
-      left:23%;
-  }
+      top:26%;
+      left:36%;
 
-  #sub{
-    position: absolute;
-    top:4.5%;
-    left:13%;
-    background-color: #F8F9FB;
-    margin: 0;
-    padding: 0;
-    width: 380px;
+  }
+  #pb{
+    position:absolute;
+    top:100%;
+    left:36%;
+      color:darkred;
+  }
+  a{
+    color:darkred;
   }
 }
-
 </style>
 </head>
 <body>
 
-  <div id="intro">
 
-      <div class="loading-container">
-      <div class="spinner"></div>
-      <div class="spinner-center"></div>
 
+
+    <div id="intro">
+
+        <div class="loading-container">
+        <div class="spinner"></div>
+        <div class="spinner-center"></div>
+      </div>
     </div>
-  </div>
 
 
 
   <div id="outro">
-<div class="bg">
+<main>
+<a id="top" href="aboutus.html" class="intro animated rotateInDownLeft" style="position: absolute; top:5%; left: 5%;">-ABOUT US-</a>
+<a  id="top" href="clients.html" class="intro animated rotateInDownRight" style="position: absolute; top:5%; right: 5%;">-CLIENTS-</a>
+<a  id="bott" href="faq.html" class="intro animated bounceInUp" style="position: absolute; top:70%; left: 5%;">-FAQ-</a>
+<a id="bott" href="contact.html" class="intro animated bounceInUp" style="position: absolute; top:70%; right: 5%;">-CONTACT-</a>
 
 
 
-<div id="sub">
-  <img class="intro animated zoomInDown" src="kalilogo.png" alt="Kali logo">
+  <img id="logom" src="kalilogor.png" class="intro animated zoomInDown" alt="Kali logo">
+  <h2 id="pb">PERSONAL BRAND SITE</h2>
 
 
 
 
 
-</div>
 
-<div id="autoplay" style="height: 1px; ">
+<div id="autoplay" style="height: 1px; color:purple; ">
 
  
 
- <div class="textef" >PITCH 1</div>
+ <div class="textef" style="margin-left: auto; margin-right: auto;">pitch 1</div>
 
- <div class="textef" >PITCH 2</div>
+ <div class="textef" style="margin-left: auto; margin-right: auto;">pitch 2</div>
 
-<div class="textef" ></div>
-
-</div>
-
-
-<div id="myNav" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <div class="overlay-content">
-    <a href="aboutus.html">ABOUT</a>
-    <a href="services.html">SERVICES</a>
-    <a href="contact.html">CONTACT</a>
-      <a href="clients.html">CLIENTS</a>
-  </div>
-</div>
-
-<span class="slideInLeft" style="font-size:24px;" onclick="openNav()">MENU</span>
-
+<div class="textef" style="margin-left: auto; margin-right: auto;">pitch 3</div>
 
 </div>
 </div>
+</main>
 
 
-  	<script> //INTRO
+
+  - <script> //INTRO
   $(document).ready(function(){
       $(function(){
 
@@ -384,7 +292,6 @@ span{
       });
   });
   </script>
-
 <script>
 $('#autoplay').delay(11000).textition({
 
@@ -400,18 +307,7 @@ $('#autoplay').delay(11000).textition({
 
 })
 </script>
-
-
-<script>
-function openNav() {
-    document.getElementById("myNav").style.width = "100%";
-}
-
-function closeNav() {
-    document.getElementById("myNav").style.width = "0%";
-}
-</script>
-
+<script type="text/javascript" src="textition.js"></script>
 
 
 

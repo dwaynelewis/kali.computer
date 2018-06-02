@@ -9,61 +9,7 @@
   <script type="text/javascript" src="textition.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 <script type="text/javascript" src="textition.js"></script>
-
-
-
-  <style>
-
-  @keyframes spinner {
-    100% {
-      transform: rotate(3600deg);
-    }
-  }
-
-  .loading-container {
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-    top: 50vh;
-    transform: translateY(-50%);
-  }
-
-  .spinner {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    background: url('http://i.imgur.com/oSHLAzp.png') center center;
-    background-size: contain;
-    transition-origin: 50% 50%;
-    animation: spinner 3s infinite alternate ease-in-out;
-  }
-  .spinner-center {
-    display: inline-block;
-    position: absolute;
-    margin-left: -100px;
-    width: 100px;
-    height: 100px;
-    background: url('http://i.imgur.com/u0BC2ZR.png') center center;
-    background-size: contain;
-    content: '';
-  }
-
-
-  #outro{
-    display: none;
-    height: 100%;
-    width: 100%;
-  }
-</style>
-
-
 <style>
-
-
-body, html {
-    height: 100%;
-    margin: 0;
-}
 
 *{
   margin: 0;
@@ -76,7 +22,9 @@ body, html {
 
 }
 
-body{
+body, html {
+    height: 100%;
+    margin: 0;
   position: relative;
 }
 
@@ -103,73 +51,38 @@ height: 100vh;
 
 }
 
-
-span{
-  color: white;
-   background-color: #69D2FA;
-   position: absolute;
-   top:25%;
-   left:0;
-   width: 23%;
-   height: 7%;
-   text-align: center;
-   padding-top: 10px;
-
-   -webkit-animation-duration: 3s;
-   -webkit-animation-delay: 0s;
-   -webkit-animation-iteration-count: 1;
+a{
+  text-decoration: line-through;
 }
 
-.overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color:white;
-    opacity: .8;
-    overflow-x: hidden;
-    transition: 0.5s;
+#autoplay{
+  position: absolute;
 }
 
-.overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-     font-size: 30px;
+#intro{
+  height: 100rem;
+        text-align: center;
+background-color: #F5F5F5;
+            }
+
+
+#outro{
+  display: none;
 }
 
-.overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #992F76;
-    display: block;
-    transition: 0.3s;
-}
+#sun{
+          display: block;
+         text-align: center;
+         text-decoration: none;
+         -webkit-animation-duration: 2s;
+         -webkit-animation-delay: 2s;
+         -webkit-animation-iteration-count: 1;
+         width: 100%;
 
-.overlay a:hover, .overlay a:focus {
-    color: #484DBF;
-}
+        }
 
-.overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-}
 
-@media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
 
-}
 
 
 
@@ -178,200 +91,195 @@ span{
 <style>
 
 
+
 	@media screen and (max-width: 450px){
 
-body{
-   /* background: linear-gradient(to bottom,#18399a 0%, #4dd2ff 100%); */
+    body, html {
+        height: 100%;
+        margin: 0;
+    }
+
+    #outro{
+        /* The image used */
+        background-image: url("blue.jpg");
+
+        /* Full height */
+        height: 100%;
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+    #sun{
+      height:7rem;
+      width:7rem;
 
 }
-span{
-  top:26%;
-  left:0%;
-   width: 28%;
-  color: white;
-   background-color: #69D2FA;
-   position: absolute;
-   text-align: center;
-   padding-top: 10px;
-   padding-bottom: 10px;
-}
 
+        #logo{
 
+          height: 17vh;
+          width: 32vw;
+        }
 
+        #p1{
+            color:black;
+            margin-top: 1rem;
 
-#autoplay{
-  position: absolute;
-  top: 12%;
-  left:5%;
-  width: 25%;
-
-}
+        }
+        #p2{
+              color:black;
+`                 margin-top: 1rem;`
+        }
 
     	.textef{
     		width: 300px;
-    		height: 16px;
+    		height: 21px;
     		text-align: center;
     		/* margin-right: 10px;
     		margin-top: 100px; */
-          font-size: 24px;
-    		color: #F7F8FA;
-    	}
+        text-shadow: .5px .5px black;
+    		color: white;
+        position: fixed;
+   top:45%;
+   left: 10%;
+}
 
 
-      img {
-          height: 8vh;
-          width: 30vw;
+      #logom{
+      margin-left: auto;
+      margin-right: auto;
+          height: 10vh;
+          width: 35vw;
           position: absolute;
-          top:-49%;
-          left:60%;
-           background-color: #F7F8FA;
+          top:99%;
+          left:21%;
+
       }
-
-
-      .bg {
-          /* The image used */
-          background-image: url("digi.jpg");
-
-          /* Full height */
-          height: 100%;
-
-          /* Center and scale the image nicely */
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-      }
-      #sub{
+      #pb{
         position: absolute;
-        top:15%;
-        left:5%;
+        top:146%;
+        left:-3%;
+        width:300px;
+          color: white;
+
       }
-
-
-    }
+      a{
+        color:white;
+      }
+      #autoplay{
+        top:188%;
+        left:-33%;
+      }
+}
 
 	@media screen and (min-width: 450px){
 
     body{
-      height: 100%;
+       background: linear-gradient(to bottom,white 0%, #2B2F3F 100%);
+
     }
 
 
-.bg {
-    /* The image used */
-    background-image: url("digi.jpg");
 
-    /* Full height */
-    height: 100%;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#autoplay{
-  position: absolute;
-  top: 8.5%;
-  left:21%;
-  width: 100%;
-}
+    #autoplay{
+      top:85%;
+      left:41%;
+    }
 
 	.textef{
-		width: 200px;;
+		width: 75%;
 		height: 21px;
 		text-align: center;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
+    margin-left: auto;
+    margin-right: auto;
 		margin-top: 100px;
-	  font-size: 36px;
-		color:#69D2FA;
-    }
+	  font-size: 24px;
+		color:white;
 
-  img {
+      top:40%;
+      left: 10%;
+
+	}
+
+  #logom{
   margin-left: auto;
   margin-right: auto;
-      height: 14vh;
+      height: 18vh;
       width: 16vw;
       position: absolute;
-      top:2%;
-      left:23%;
-  }
+      top:26%;
+      left:36%;
 
-  #sub{
-    position: absolute;
-    top:4.5%;
-    left:13%;
-    background-color: #F8F9FB;
-    margin: 0;
-    padding: 0;
-    width: 380px;
+  }
+  #pb{
+    position:absolute;
+    top:100%;
+    left:36%;
+      color:darkred;
+  }
+  a{
+    color:darkred;
   }
 }
-
 </style>
 </head>
 <body>
 
+
   <div id="intro">
 
-      <div class="loading-container">
-      <div class="spinner"></div>
-      <div class="spinner-center"></div>
+    <img src="kalisun.png" id="sun" class="intro animated rollIn">
 
-    </div>
+    <img src="kalilogor.png" id="logo" class="intro animated zoomInDown" alt="Kali logo">
+
+    <h2 id="p1" class="intro animated slideInLeft">PITCH 1</h2>
+      <h2 id="p2" class="intro animated slideInRight">PITCH 2</h2>
+        <h2 id="p3" class="intro animated slideInLeft">PITCH 3</h2>
+
   </div>
 
-
-
   <div id="outro">
-<div class="bg">
-
+<main>
+<a id="top" href="aboutus.html" class="intro animated rotateInDownLeft" style="position: absolute; top:5%; left: 5%;">-ABOUT US-</a>
+<a  id="top" href="clients.html" class="intro animated rotateInDownRight" style="position: absolute; top:5%; right: 5%;">-CLIENTS-</a>
+<a  id="bott" href="faq.html" class="intro animated bounceInUp" style="position: absolute; top:70%; left: 5%;">-FAQ-</a>
+<a id="bott" href="contact.html" class="intro animated bounceInUp" style="position: absolute; top:70%; right: 5%;">-CONTACT-</a>
 
 
 <div id="sub">
-  <img class="intro animated zoomInDown" src="kalilogo.png" alt="Kali logo">
+  <img id="logom" src="kalilogor.png" class="intro animated zoomInDown" alt="Kali logo">
+  <h2 id="pb">PERSONAL BRAND SITE</h2>
 
 
 
 
 
-</div>
 
-<div id="autoplay" style="height: 1px; ">
+<div id="autoplay" style="height: 1px; color:purple; ">
 
  
 
- <div class="textef" >PITCH 1</div>
+ <div class="textef" style="margin-left: auto; margin-right: auto;">pitch 1</div>
 
- <div class="textef" >PITCH 2</div>
+ <div class="textef" style="margin-left: auto; margin-right: auto;">pitch 2</div>
 
-<div class="textef" ></div>
-
-</div>
-
-
-<div id="myNav" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <div class="overlay-content">
-    <a href="aboutus.html">ABOUT</a>
-    <a href="services.html">SERVICES</a>
-    <a href="contact.html">CONTACT</a>
-      <a href="clients.html">CLIENTS</a>
-  </div>
-</div>
-
-<span class="slideInLeft" style="font-size:24px;" onclick="openNav()">MENU</span>
-
+<div class="textef" style="margin-left: auto; margin-right: auto;">pitch 3</div>
 
 </div>
 </div>
+</main>
+</div>
 
 
-  	<script> //INTRO
+  - <script> //INTRO
   $(document).ready(function(){
       $(function(){
 
-          $("#intro").delay(1000).fadeOut("slow");
+          $("#intro").delay(5000).fadeOut("slow");
 
        });
    });
@@ -380,11 +288,10 @@ span{
   $(document).ready(function(){
       $(function(){
 
-          $("#outro").delay(1500).fadeIn("slow");
+          $("#outro").delay(5500).fadeIn("slow");
       });
   });
   </script>
-
 <script>
 $('#autoplay').delay(11000).textition({
 
@@ -400,18 +307,7 @@ $('#autoplay').delay(11000).textition({
 
 })
 </script>
-
-
-<script>
-function openNav() {
-    document.getElementById("myNav").style.width = "100%";
-}
-
-function closeNav() {
-    document.getElementById("myNav").style.width = "0%";
-}
-</script>
-
+<script type="text/javascript" src="textition.js"></script>
 
 
 
