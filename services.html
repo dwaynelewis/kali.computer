@@ -7,16 +7,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
 <!-- remove first 5 lines -->
-<title>"KALI"</title>
+<title>contact</title>
 
 
-  <style>
-  #intro{
-    height:100%;
-    background-color: white;
-  }
+<style>
+
+
+
 
   @keyframes spinner {
     100% {
@@ -52,94 +51,97 @@
     content: '';
   }
 
-  .loading-text {
-    position: relative;
-    z-index: 1;
-    font-size: 1.5rem;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    margin-left: 0.5em;
-  }
-
+#intro{
+    background: white;
+  height: 100%;
+}
 
   #outro{
     display: none;
   }
 </style>
 
+<style>
+#content{
+  	font-family: 'Gugi', cursive;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  color: white;
+width:100%;
+  height: 100%;
+  margin: 0, auto;
+  grid-template-areas:
+  "header header header header"
+  "section section section section"
+  "main main main main"
+  "main main main main"
+  "aside aside aside aside"
+  "footer footer footer footer"
+;
+}
+#content > *{
+
+  padding: 30px;
+}
+header{
+  grid-area: header;
+}
+aside{
+  grid-area: aside;
+}
+footer{
+  grid-area: footer;
+}
+main{
+  grid-area: main;
+
+  display: grid;
+}
+section{
+  grid-area: section;
+}
+
+#demo{
+  background-color: inherit;
+  color: white;
+  text-align: center;
+}
+  </style>
 
   <style>
 
-    p{
-    font-size: 200%;
-  }
+
 
   body {
     margin: 0;
-    color: white;
-      font-family: 'Anton', sans-serif;
-    background-color: black;
+
+    font-family: 'Dosis', sans-serif;
+    /* background: linear-gradient(to bottom, #00FFFF 0%, #4682B4 100%); */
+      background: linear-gradient(to bottom, #F08080 0%, #B22222 100%);
   }
 
-
-
-  #content{
-   background-color: black;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    max-width: 1270px;
-    margin-left: auto;
-    margin-right: auto;
-    grid-gap: 10px;
-    grid-template-areas:
-    "header header header header"
-    "section section section section"
-    "main main main main"
-    "main main main main"
-    "aside aside aside aside"
-    "footer footer footer footer"
-  ;
-  }
-  #content > *{
-     border: 1px solid white;
-    padding: 30px;
-  }
-  header{
-    grid-area: header;
-  }
-  aside{
-    grid-area: aside;
-  }
-  footer{
-    grid-area: footer;
-  }
-  main{
-    grid-area: main;
-    background-color: inherit;
-
-    display: grid;
-  }
-  section{
-    grid-area: section;
-  }
-
-  #demo{
-    background-color: white;
-    color:  #bdb76b;
-    text-align: center;
-  }
+h3#opening{
+  display: block;
+ margin-left: auto;
+ margin-right: auto;
+}
 
   #questions{
     display: inline;
   }
 
   #getstarted{
-
+    text-decoration: line-through;
     width: 100px;
-    background-color: white;
-    color:darkred;
+    color:white;
     padding: 3px;
     font-size: 110%;
+  }
+  button#getstarted{
+    display: block;
+   margin-left: auto;
+   margin-right: auto;
+   background-color: inherit;
   }
   #ques1{
     display: none;
@@ -319,20 +321,73 @@
     display: none;
   }
 
-      #restart{
+
+.topnav {
+  position: relative;
+  overflow: hidden;
+  background-color:inherit;
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: inherit;
+  color:white;
+  border-radius: 25%;
+}
+
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topnav-right {
+  float: right;
+}
+
+/* Responsive navigation menu (for mobile devices) */
+@media screen and (max-width: 600px) {
+
+  .topnav{
+    background-color: inherit;
+  }
+
+  .topnav a.active {
+    background-color: inherit;
+    text-decoration: line-through;
+  }
+
+.topnav a{
+  font-size: 16px;
+}
+  .topnav-right, .left{
+    float: none;
     display: none;
-     text-align: center;
-
   }
 
-  #restart a{
-    color:#6895E1;
-    background-color: white;
-    padding: 5px;
-    border-radius: 25%;
-
-
+  .topnav-centered a {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
   }
+}
 
 
   </style>
@@ -341,52 +396,62 @@
 <body>
 
 
-
   <div id="intro">
 
       <div class="loading-container">
       <div class="spinner"></div>
       <div class="spinner-center"></div>
-
     </div>
   </div>
 
   <div id="outro">
-
 
     <div id="content">
 
 
 
     <header>
-      <!-- <h1 style="text-align: center; background-color: white; color: #0e194c; width: 190px; margin: auto;">KALI</h1> -->
-      <img class="intro animated zoomInDown" style="height: 50px;" src="kalilogor.png" alt="Kali logo">
-
-        <a href="home.html" style="color:white;">&#9776;</a>
-
-
-
+      <h1 style="text-align: center; color: white; width: 190px; margin: auto;">drl</h1>
     </header>
 
     <footer>
+      <div class="topnav">
+
+    <!-- Centered link -->
+    <div class="topnav-centered">
+      <a href="home.html" class="active">-home-</a>
+    </div>
+
+    <!-- Left-aligned links (default) -->
+    <div class="left">
+    <a href="aboutme.html">about me</a>
+    <a href="contact.html">contact</a>
+  </div>
+
+    <!-- Right-aligned links -->
+     <div class="topnav-right">
+      <a href="services.html">services</a>
+      <a href="themes.html">themes</a>
+    </div>
+
+  </div>
+
     </footer>
     <aside>
-
+        <button id= "getstarted">-begin-</button>
     </aside>
     <section>
-      <div id="restart">
-<a href="https://sexedusa.com/pages/draft" target="_blank">Start Again</a>
-      </div>
+
     </section>
     <main style="">
 
-<h3 id="opening">UNDER CONSTRUCTION!</h3>
+<h3 id="opening">time saving questions</h3>
 
 
 
-  <button id= "getstarted">Click to get started</button>
+
 <div id="ques1">
-  <p>Do you have an existing website?</p>
+  <p>do you need a new site for your business or personal brand?</p>
 <button id = "choice1a" type="button" class="btn btn-outline-light text-light">Yes</button><br>
 <button id = "choice1b" type="button" class="btn btn-outline-light text-light">No</button>
   </div>
@@ -397,26 +462,26 @@
 <!-- <button id="ques1-5">Are you ready for the next question?</button> -->
 
 <div id="ques2">
-  <p> Has his appearance become a priority for him lately?</p>
+  <p> are you satisfied with your existing digital image/branding?</p>
 <button id = "choice2a" type="button" class="btn btn-outline-light text-light">Yes</button><br>
 <button id = "choice2b" type="button" class="btn btn-outline-light text-light">No</button>
       </div>
 
 
 <div id="ques3">
-  <p>Has he brought up breaking up during a fight lately?</p>
+  <p>do you want to use your site for ecommerce or branding/information?</p>
 <button id = "choice3a" type="button" class="btn btn-outline-light text-light">Yes</button><br>
 <button id = "choice3b" type="button" class="btn btn-outline-light text-light">No</button>
       </div>
 
 
 <div id="ques4">
-  <p>Is he secretive with his technology?</p>
+  <p>are you interested in existing templates(pls note:template designs are limited to 10 sales)</p>
 <button id = "choice4a" type="button" class="btn btn-outline-light text-light">Yes</button><br>
 <button id = "choice4b" type="button" class="btn btn-outline-light text-light">No</button>
       </div>
 
-
+<!--
 <div id="ques5">
   <p>Does he accuse you of cheating?</p>
 <button id = "choice5a" type="button" class="btn btn-outline-light text-light">Yes</button><br>
@@ -463,7 +528,7 @@
   <p>BONUS QUESTION: Can you FaceTime him w/o warning?</p>
 <button id = "choice11a" type="button" class="btn btn-outline-light text-light">Yes</button><br>
 <button id = "choice11b" type="button" class="btn btn-outline-light text-light">No</button>
-      </div>
+      </div> -->
 
 
 <div id="goodbye">
@@ -476,26 +541,32 @@
 
 
 
+
+
+
+    </main>
+
+  </div>
 </div>
-</div>
 
-<script> //INTRO
-$(document).ready(function(){
-  $(function(){
 
-      $("#intro").delay(2000).fadeOut("slow");
+      <script> //INTRO
+    $(document).ready(function(){
+        $(function(){
 
-   });
-});
-</script>
-<script>
-$(document).ready(function(){
-  $(function(){
+            $("#intro").delay(1000).fadeOut("slow");
 
-      $("#outro").delay(2500).fadeIn("slow");
-  });
-});
-</script>
+         });
+     });
+     </script>
+     <script>
+    $(document).ready(function(){
+        $(function(){
+
+            $("#outro").delay(1500).fadeIn("slow");
+        });
+    });
+    </script>
 
     <script>
 
@@ -619,151 +690,151 @@ $(document).ready(function(){
        ans4 = false;
      };
 
-        document.getElementById("choice5a").onclick = function fifthAnswer(){
-          document.getElementById("ques6").style.display = "block";
-        document.getElementById("choice6a").style.display = "block";
-        document.getElementById("choice6b").style.display = "block";
-        document.getElementById("ques5").style.display = "none";
-        document.getElementById("choice5a").style.display = "none";
-        document.getElementById("choice5b").style.display = "none";
-        ans5 = true;
-
-      };
-
-        document.getElementById("choice5b").onclick = function fifthAnswer(){
-          document.getElementById("ques6").style.display = "block";
-        document.getElementById("choice6a").style.display = "block";
-        document.getElementById("choice6b").style.display = "block";
-        document.getElementById("ques5").style.display = "none";
-        document.getElementById("choice5a").style.display = "none";
-        document.getElementById("choice5b").style.display = "none";
-
-         ans5 = false;
-
-       };
-
-
-
-        document.getElementById("choice6a").onclick = function sixthAnswer(){
-          document.getElementById("ques6").style.display = "none";
-        document.getElementById("choice6a").style.display = "none";
-        document.getElementById("choice6b").style.display = "none";
-        document.getElementById("ques7").style.display = "block";
-        document.getElementById("choice7a").style.display = "block";
-        document.getElementById("choice7b").style.display = "block";
-         ans6 = true;
-
-
-       };
-
-        document.getElementById("choice6b").onclick = function sixthAnswer(){
-          document.getElementById("ques6").style.display = "none";
-        document.getElementById("choice6a").style.display = "none";
-        document.getElementById("choice6b").style.display = "none";
-        document.getElementById("ques7").style.display = "block";
-        document.getElementById("choice7a").style.display = "block";
-        document.getElementById("choice7b").style.display = "block";
-         ans6 = false;
-
-       };
-
-        document.getElementById("choice7a").onclick = function seventhAnswer(){
-          document.getElementById("ques7").style.display = "none";
-        document.getElementById("choice7a").style.display = "none";
-        document.getElementById("choice7b").style.display = "none";
-        document.getElementById("ques8").style.display = "block";
-        document.getElementById("choice8a").style.display = "block";
-        document.getElementById("choice8b").style.display = "block";
-         ans7 = true;
-
-
-       };
-
-        document.getElementById("choice7b").onclick = function seventhAnswer(){
-          document.getElementById("ques7").style.display = "none";
-        document.getElementById("choice7a").style.display = "none";
-        document.getElementById("choice7b").style.display = "none";
-        document.getElementById("ques8").style.display = "block";
-        document.getElementById("choice8a").style.display = "block";
-        document.getElementById("choice8b").style.display = "block";
-
-       };
-
-        document.getElementById("choice8a").onclick = function eigthAnswer(){
-          document.getElementById("ques8").style.display = "none";
-        document.getElementById("choice8a").style.display = "none";
-        document.getElementById("choice8b").style.display = "none";
-        document.getElementById("ques9").style.display = "block";
-        document.getElementById("choice9a").style.display = "block";
-        document.getElementById("choice9b").style.display = "block";
-
-
-       };
-
-        document.getElementById("choice8b").onclick = function eigthAnswer(){
-          document.getElementById("ques8").style.display = "none";
-        document.getElementById("choice8a").style.display = "none";
-        document.getElementById("choice8b").style.display = "none";
-        document.getElementById("ques9").style.display = "block";
-        document.getElementById("choice9a").style.display = "block";
-        document.getElementById("choice9b").style.display = "block";
-         ans8 = true;
-
-
-       };
-
-
-        document.getElementById("choice9a").onclick = function ninthAnswer(){
-          document.getElementById("ques9").style.display = "none";
-        document.getElementById("choice9a").style.display = "none";
-        document.getElementById("choice9b").style.display = "none";
-        document.getElementById("ques10").style.display = "block";
-        document.getElementById("choice10a").style.display = "block";
-        document.getElementById("choice10b").style.display = "block";
-         ans9 = true;
-
-       };
-
-        document.getElementById("choice9b").onclick = function ninthAnswer(){
-          document.getElementById("ques9").style.display = "none";
-        document.getElementById("choice9a").style.display = "none";
-        document.getElementById("choice9b").style.display = "none";
-        document.getElementById("ques10").style.display = "block";
-        document.getElementById("choice10a").style.display = "block";
-        document.getElementById("choice10b").style.display = "block";
-         ans9 = false;
-
-       };
-
-
-        document.getElementById("choice10a").onclick = function total(){
-          document.getElementById("ques10").style.display = "none";
-          document.getElementById("choice10a").style.display = "none";
-          document.getElementById("choice10b").style.display = "none";
-          document.getElementById("ques11").style.display = "block";
-          document.getElementById("choice11a").style.display = "block";
-          document.getElementById("choice11b").style.display = "block";
-        ans10 = true;
-
-      };
-
-        document.getElementById("choice10b").onclick = function total(){
-          document.getElementById("ques10").style.display = "none";
-          document.getElementById("choice10a").style.display = "none";
-          document.getElementById("choice10b").style.display = "none";
-          document.getElementById("ques11").style.display = "block";
-          document.getElementById("choice11a").style.display = "block";
-          document.getElementById("choice11b").style.display = "block";
-
-      };
-
-        document.getElementById("choice11a").onclick = function total(){
-          document.getElementById("ques11").style.display = "none";
-          document.getElementById("choice11a").style.display = "none";
-          document.getElementById("choice11b").style.display = "none";
-         document.getElementById("goodbye").style.display = "block";
-          document.getElementById("restart").style.display = "block";
-         ans11 = false;
+      //   document.getElementById("choice5a").onclick = function fifthAnswer(){
+      //     document.getElementById("ques6").style.display = "block";
+      //   document.getElementById("choice6a").style.display = "block";
+      //   document.getElementById("choice6b").style.display = "block";
+      //   document.getElementById("ques5").style.display = "none";
+      //   document.getElementById("choice5a").style.display = "none";
+      //   document.getElementById("choice5b").style.display = "none";
+      //   ans5 = true;
+      //
+      // };
+      //
+      //   document.getElementById("choice5b").onclick = function fifthAnswer(){
+      //     document.getElementById("ques6").style.display = "block";
+      //   document.getElementById("choice6a").style.display = "block";
+      //   document.getElementById("choice6b").style.display = "block";
+      //   document.getElementById("ques5").style.display = "none";
+      //   document.getElementById("choice5a").style.display = "none";
+      //   document.getElementById("choice5b").style.display = "none";
+      //
+      //    ans5 = false;
+      //
+      //  };
+      //
+      //
+      //
+      //   document.getElementById("choice6a").onclick = function sixthAnswer(){
+      //     document.getElementById("ques6").style.display = "none";
+      //   document.getElementById("choice6a").style.display = "none";
+      //   document.getElementById("choice6b").style.display = "none";
+      //   document.getElementById("ques7").style.display = "block";
+      //   document.getElementById("choice7a").style.display = "block";
+      //   document.getElementById("choice7b").style.display = "block";
+      //    ans6 = true;
+      //
+      //
+      //  };
+      //
+      //   document.getElementById("choice6b").onclick = function sixthAnswer(){
+      //     document.getElementById("ques6").style.display = "none";
+      //   document.getElementById("choice6a").style.display = "none";
+      //   document.getElementById("choice6b").style.display = "none";
+      //   document.getElementById("ques7").style.display = "block";
+      //   document.getElementById("choice7a").style.display = "block";
+      //   document.getElementById("choice7b").style.display = "block";
+      //    ans6 = false;
+      //
+      //  };
+      //
+      //   document.getElementById("choice7a").onclick = function seventhAnswer(){
+      //     document.getElementById("ques7").style.display = "none";
+      //   document.getElementById("choice7a").style.display = "none";
+      //   document.getElementById("choice7b").style.display = "none";
+      //   document.getElementById("ques8").style.display = "block";
+      //   document.getElementById("choice8a").style.display = "block";
+      //   document.getElementById("choice8b").style.display = "block";
+      //    ans7 = true;
+      //
+      //
+      //  };
+      //
+      //   document.getElementById("choice7b").onclick = function seventhAnswer(){
+      //     document.getElementById("ques7").style.display = "none";
+      //   document.getElementById("choice7a").style.display = "none";
+      //   document.getElementById("choice7b").style.display = "none";
+      //   document.getElementById("ques8").style.display = "block";
+      //   document.getElementById("choice8a").style.display = "block";
+      //   document.getElementById("choice8b").style.display = "block";
+      //
+      //  };
+      //
+      //   document.getElementById("choice8a").onclick = function eigthAnswer(){
+      //     document.getElementById("ques8").style.display = "none";
+      //   document.getElementById("choice8a").style.display = "none";
+      //   document.getElementById("choice8b").style.display = "none";
+      //   document.getElementById("ques9").style.display = "block";
+      //   document.getElementById("choice9a").style.display = "block";
+      //   document.getElementById("choice9b").style.display = "block";
+      //
+      //
+      //  };
+      //
+      //   document.getElementById("choice8b").onclick = function eigthAnswer(){
+      //     document.getElementById("ques8").style.display = "none";
+      //   document.getElementById("choice8a").style.display = "none";
+      //   document.getElementById("choice8b").style.display = "none";
+      //   document.getElementById("ques9").style.display = "block";
+      //   document.getElementById("choice9a").style.display = "block";
+      //   document.getElementById("choice9b").style.display = "block";
+      //    ans8 = true;
+      //
+      //
+      //  };
+      //
+      //
+      //   document.getElementById("choice9a").onclick = function ninthAnswer(){
+      //     document.getElementById("ques9").style.display = "none";
+      //   document.getElementById("choice9a").style.display = "none";
+      //   document.getElementById("choice9b").style.display = "none";
+      //   document.getElementById("ques10").style.display = "block";
+      //   document.getElementById("choice10a").style.display = "block";
+      //   document.getElementById("choice10b").style.display = "block";
+      //    ans9 = true;
+      //
+      //  };
+      //
+      //   document.getElementById("choice9b").onclick = function ninthAnswer(){
+      //     document.getElementById("ques9").style.display = "none";
+      //   document.getElementById("choice9a").style.display = "none";
+      //   document.getElementById("choice9b").style.display = "none";
+      //   document.getElementById("ques10").style.display = "block";
+      //   document.getElementById("choice10a").style.display = "block";
+      //   document.getElementById("choice10b").style.display = "block";
+      //    ans9 = false;
+      //
+      //  };
+      //
+      //
+      //   document.getElementById("choice10a").onclick = function total(){
+      //     document.getElementById("ques10").style.display = "none";
+      //     document.getElementById("choice10a").style.display = "none";
+      //     document.getElementById("choice10b").style.display = "none";
+      //     document.getElementById("ques11").style.display = "block";
+      //     document.getElementById("choice11a").style.display = "block";
+      //     document.getElementById("choice11b").style.display = "block";
+      //   ans10 = true;
+      //
+      // };
+      //
+      //   document.getElementById("choice10b").onclick = function total(){
+      //     document.getElementById("ques10").style.display = "none";
+      //     document.getElementById("choice10a").style.display = "none";
+      //     document.getElementById("choice10b").style.display = "none";
+      //     document.getElementById("ques11").style.display = "block";
+      //     document.getElementById("choice11a").style.display = "block";
+      //     document.getElementById("choice11b").style.display = "block";
+      //
+      // };
+      //
+      //   document.getElementById("choice11a").onclick = function total(){
+      //     document.getElementById("ques11").style.display = "none";
+      //     document.getElementById("choice11a").style.display = "none";
+      //     document.getElementById("choice11b").style.display = "none";
+      //    document.getElementById("goodbye").style.display = "block";
+      //     document.getElementById("restart").style.display = "block";
+      //    ans11 = false;
 
                     if (ans2 === true && ans4 === true && ans5 === true &&
                   ans8 === true && ans9 === true){
@@ -844,7 +915,6 @@ $(document).ready(function(){
 
 
     </script>
-
 
 
 </body>
