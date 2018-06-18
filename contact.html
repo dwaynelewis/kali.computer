@@ -12,6 +12,65 @@
 
 
 
+
+		<style>
+
+		.overlay {
+		    height: 100%;
+		    width: 0;
+		    position: fixed;
+		    z-index: 1;
+		    top: 0;
+		    left: 0;
+		    background-color: rgb(0,0,0);
+		    background-color: rgba(0,0,0, 0.9);
+		    overflow-x: hidden;
+		    transition: 0.5s;
+
+		}
+
+
+		.overlay-content {
+		    position: relative;
+		    top: 25%;
+		    width: 100%;
+		    text-align: center;
+		    margin-top: 30px;
+		}
+
+		.overlay a {
+		    padding: 8px;
+		    text-decoration: none;
+		    font-size: 36px;
+		    color: white;
+		    display: block;
+		    transition: 0.3s;
+          font-family: 'Raleway', sans-serif;
+		}
+
+		.overlay a:hover, .overlay a:focus {
+		    color: #f1f1f1;
+		}
+
+		.overlay .closebtn {
+		    position: absolute;
+		    top: 20px;
+		    right: 45px;
+		    font-size: 60px;
+		}
+
+		@media screen and (max-height: 450px) {
+		  .overlay a {font-size: 20px}
+		  .overlay .closebtn {
+		    font-size: 40px;
+		    top: 15px;
+		    right: 35px;
+		  }
+		}
+		</style>
+
+
+
 <style>
 html,
 body {
@@ -181,13 +240,34 @@ i {
 <i>Profession and Title</i>
 <a href="#" class="fa fa-facebook"></a>
 <a href="#" class="fa fa-twitter"></a>
-<a href="#" class="fa fa-behance"></a>
-<a href="#" class="fa fa-codepen"></a>
-<a href="#" class="fa fa-github"></a>
+<a href="#" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-pinterest"></a>
 
-<div style="font-size: 12px;  text-align: center;  color: #666;  background:rgba(0,0,0,0.7);  width: 100vw;  position: absolute;  bottom: 0px;  opacity: 0.5;padding:5px 0;">Follow me on <a href="https://twitter.com/nodws" target="_b" style="color: #999">Twitter</a> new <a href="http://codepen.com/nodws" target="_b" style="color: #999">Pen</a> each week</div>
+<div style="font-size: 12px;  text-align: center;  color: #666;  background:rgba(0,0,0,0.7);  width: 100vw;  position: absolute;  bottom: 0px;  opacity: 0.9;padding:5px 0;">KALI</div>
 
 
+	<div id="myNav" class="overlay">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<div class="overlay-content">
+			<a href="aboutme.html">ABOUT</a>
+			<a href="work.html">WORK</a>
+			<a href="home.html">HOME</a>
+		</div>
+	</div>
+
+
+  	<span style="position: absolute; top:0; left:0; font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+  <script>
+  function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+  }
+
+  function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+  }
+  </script>
 
     <script  src="js/index.js"></script>
 
