@@ -1,382 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Minimal Profile Page </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+    <style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+    @import url(http://weloveiconfonts.com/api/?family=entypo);
+
+    /* entypo */
+    [class*="entypo-"]:before {
+      font-family: 'entypo', sans-serif;
+    }
+
+    body {
+      height:100%;
+      font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+      font-size: 1em;
+      font-weight: 300;
+      line-height: 1.5;
+      letter-spacing: 0.05em;
+      background-image: linear-gradient(135deg, rgba(52, 152, 219,0.9) 0%,rgba(243, 65, 65, 0.8) 100%), url('https://i.imgur.com/ZWeegbh.jpg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      background-size: cover;
+
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .avatar {
+      background-image:url('her.jpg');
+      background-size: cover;
+      border-radius: 100%;
+      margin: 4rem auto 2rem auto;
+      width: 20rem;
+      height: 20rem;
+      box-shadow: 0 0 0 8px rgba(255,255,255,0.2);
+      transition: all 0.5s ease-in-out;
+    }
+
+    .avatar:hover {
+      box-shadow: 0 0 0 12px rgba(255,255,255,0.6);
+    }
+
+    h1 {
+      text-align:center;
+      font-size:24px;
+      font-weight:300;
+      color:#ffffff;
+      text-shadow: 1px 1px 2px #444444;
+      margin: 0;
+    }
+
+    h3 {
+      text-align:center;
+      font-size:16px;
+      font-weight:300;
+      color:#ffffff;
+      text-shadow: 1px 1px 2px #444444;
+      margin: 0.5em 0 1em 0;
+    }
+
+    p {
+      text-align:center;
+      font-size:12px;
+      font-weight:300;
+      color:#ffffff;
+      text-shadow: 1px 1px 2px #444444;
+    }
+
+    .container {
+    	left: 50%;
+    	margin:6em 0 0 -108px;
+    	position: absolute;
+    }
+
+    .social {
+    	position: relative;
+    	height: 3em;
+    	width: 13.5em;
+    }
+
+    .social li {
+      border-radius:10px;
+    	display: block;
+    	height: 4em;
+    	line-height: 4em;
+    	margin: -2.2em;
+    	position: absolute;
+    	transition: all 0.5s ease-in-out;
+    	-webkit-transform: rotate(45deg);
+    	        transform: rotate(45deg);
+    	text-align: center;
+    	width: 4em;
+      box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+    }
+
+    .social a {
+    	color: #ffffff;
+      text-decoration:none;
+    	display: block;
+    	height: 4em;
+    	line-height: 4em;
+    	text-align: center;
+    	-webkit-transform: rotate(-45deg);
+    	        transform: rotate(-45deg);
+    	width: 4em;
+    }
+
+    @media only screen
+    and (max-width : 320px) {
+
+    .container {
+    left: 50%;
+    margin: 5em 0 0 -64px;
+    position: absolute;
+    }
+
+    .social {
+    	position: relative;
+    	height: 3em;
+    	width: 10em;
+    }
 
+    .social li {
+    	height: 3em;
+    	line-height: 3em;
+    	width: 3em;
+    }
 
-          <!DOCTYPE html>
-          <html lang="en" >
+    .social a {
+    	height: 3em;
+    	line-height: 3em;
+    	width: 3em;
+    }
 
-          <head>
-            <meta charset="UTF-8">
-            <title>contact</title>
+    }
 
-              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    .facebook {
+      background:rgba(255,255,255,0.1);
+    	left: 0;
+    	top: 0%;
+    }
 
+    .facebook:hover{
+      background:#155b9d;
+      box-shadow: 0 0 0 2px #155b9d;
+    }
 
-                <style>
-                /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
-                /*Sakura animation using WebGL. No images are used. The framerate might be slow or the demo might not play at all in some older systems so you can watch this video: http://www.screenr.com/BFZ8. Let me make it clear that I did not make this and just thought is was very cool and wanted to share it.
-          */
+    .twitter {
+      background:rgba(255,255,255,0.1);
+    	bottom: 0;
+    	left: 25%;
+    }
 
-          body {
-              padding:0;
-              margin:0;
-              overflow:hidden;
-          	  height: 600px;
-          }
-          canvas {
-              padding:0;
-              margin:0;
-          }
-          div.btnbg {
-              position:fixed;
-              left:0;
-              top:0;
-              box-shadow: 0px 0px 15px #ccc;
-          }
-          div.btnbg:hover{
-              text-shadow: 0px 0px 3px #ccc;
-              box-shadow: 0px 0px 20px #ccc;
-          }
-          #cinfo{
-           height:100rem;
-           width: 94rem;
-           color:white;
-           text-align:center;
-          }
-          .hello{
-            margin-top: 5rem;
-            font-size: 32px;
-          }
-          a{
-            color: white;
-            text-decoration: none;
-            font-size: 45px;
-            line-height:2;
-          }
-              </style>
-
-
-
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
-          </head>
-
-          <body>
-
-
-            <canvas id="sakura"></canvas>
-
-          <div class="btnbg">
-          <button type="button" onclick="toggleAnimation(this)">Stop</button>
-
-            <div id="cinfo">
-
-              <div class="hello"><h1 style:"position: absolute; top:10rem;">NAME HERE</h1><br><h2>info@namehere.com</h2><br>
-                <h2>5 5 5 4 4 4 0 0 0 0</h2></div><BR>	<a href="home.html">home</a><BR>	<a href="aboutme.html">about</a>
-                <br>	<a href="services.html">services</a>
-
-
-
-
-                </div>
-
-            </div>
-          </div>
-
-
-
-          <!-- sakura shader -->
-          <script id="sakura_point_vsh" type="x-shader/x_vertex">
-          uniform mat4 uProjection;
-          uniform mat4 uModelview;
-          uniform vec3 uResolution;
-          uniform vec3 uOffset;
-          uniform vec3 uDOF;  //x:focus distance, y:focus radius, z:max radius
-          uniform vec3 uFade; //x:start distance, y:half distance, z:near fade start
-
-          attribute vec3 aPosition;
-          attribute vec3 aEuler;
-          attribute vec2 aMisc; //x:size, y:fade
-
-          varying vec3 pposition;
-          varying float psize;
-          varying float palpha;
-          varying float pdist;
-
-          //varying mat3 rotMat;
-          varying vec3 normX;
-          varying vec3 normY;
-          varying vec3 normZ;
-          varying vec3 normal;
-
-          varying float diffuse;
-          varying float specular;
-          varying float rstop;
-          varying float distancefade;
-
-          void main(void) {
-              // Projection is based on vertical angle
-              vec4 pos = uModelview * vec4(aPosition + uOffset, 1.0);
-              gl_Position = uProjection * pos;
-              gl_PointSize = aMisc.x * uProjection[1][1] / -pos.z * uResolution.y * 0.5;
-
-              pposition = pos.xyz;
-              psize = aMisc.x;
-              pdist = length(pos.xyz);
-              palpha = smoothstep(0.0, 1.0, (pdist - 0.1) / uFade.z);
-
-              vec3 elrsn = sin(aEuler);
-              vec3 elrcs = cos(aEuler);
-              mat3 rotx = mat3(
-                  1.0, 0.0, 0.0,
-                  0.0, elrcs.x, elrsn.x,
-                  0.0, -elrsn.x, elrcs.x
-              );
-              mat3 roty = mat3(
-                  elrcs.y, 0.0, -elrsn.y,
-                  0.0, 1.0, 0.0,
-                  elrsn.y, 0.0, elrcs.y
-              );
-              mat3 rotz = mat3(
-                  elrcs.z, elrsn.z, 0.0,
-                  -elrsn.z, elrcs.z, 0.0,
-                  0.0, 0.0, 1.0
-              );
-              mat3 rotmat = rotx * roty * rotz;
-              normal = rotmat[2];
-
-              mat3 trrotm = mat3(
-                  rotmat[0][0], rotmat[1][0], rotmat[2][0],
-                  rotmat[0][1], rotmat[1][1], rotmat[2][1],
-                  rotmat[0][2], rotmat[1][2], rotmat[2][2]
-              );
-              normX = trrotm[0];
-              normY = trrotm[1];
-              normZ = trrotm[2];
-
-              const vec3 lit = vec3(0.6917144638660746, 0.6917144638660746, -0.20751433915982237);
-
-              float tmpdfs = dot(lit, normal);
-              if(tmpdfs < 0.0) {
-                  normal = -normal;
-                  tmpdfs = dot(lit, normal);
-              }
-              diffuse = 0.4 + tmpdfs;
-
-              vec3 eyev = normalize(-pos.xyz);
-              if(dot(eyev, normal) > 0.0) {
-                  vec3 hv = normalize(eyev + lit);
-                  specular = pow(max(dot(hv, normal), 0.0), 20.0);
-              }
-              else {
-                  specular = 0.0;
-              }
-
-              rstop = clamp((abs(pdist - uDOF.x) - uDOF.y) / uDOF.z, 0.0, 1.0);
-              rstop = pow(rstop, 0.5);
-              //-0.69315 = ln(0.5)
-              distancefade = min(1.0, exp((uFade.x - pdist) * 0.69315 / uFade.y));
-          }
-          </script>
-          <script id="sakura_point_fsh" type="x-shader/x_fragment">
-          #ifdef GL_ES
-          //precision mediump float;
-          precision highp float;
-          #endif
-
-          uniform vec3 uDOF;  //x:focus distance, y:focus radius, z:max radius
-          uniform vec3 uFade; //x:start distance, y:half distance, z:near fade start
-
-          const vec3 fadeCol = vec3(0.08, 0.03, 0.06);
-
-          varying vec3 pposition;
-          varying float psize;
-          varying float palpha;
-          varying float pdist;
-
-          //varying mat3 rotMat;
-          varying vec3 normX;
-          varying vec3 normY;
-          varying vec3 normZ;
-          varying vec3 normal;
-
-          varying float diffuse;
-          varying float specular;
-          varying float rstop;
-          varying float distancefade;
-
-          float ellipse(vec2 p, vec2 o, vec2 r) {
-              vec2 lp = (p - o) / r;
-              return length(lp) - 1.0;
-          }
-
-          void main(void) {
-              vec3 p = vec3(gl_PointCoord - vec2(0.5, 0.5), 0.0) * 2.0;
-              vec3 d = vec3(0.0, 0.0, -1.0);
-              float nd = normZ.z; //dot(-normZ, d);
-              if(abs(nd) < 0.0001) discard;
-
-              float np = dot(normZ, p);
-              vec3 tp = p + d * np / nd;
-              vec2 coord = vec2(dot(normX, tp), dot(normY, tp));
-
-              //angle = 15 degree
-              const float flwrsn = 0.258819045102521;
-              const float flwrcs = 0.965925826289068;
-              mat2 flwrm = mat2(flwrcs, -flwrsn, flwrsn, flwrcs);
-              vec2 flwrp = vec2(abs(coord.x), coord.y) * flwrm;
-
-              float r;
-              if(flwrp.x < 0.0) {
-                  r = ellipse(flwrp, vec2(0.065, 0.024) * 0.5, vec2(0.36, 0.96) * 0.5);
-              }
-              else {
-                  r = ellipse(flwrp, vec2(0.065, 0.024) * 0.5, vec2(0.58, 0.96) * 0.5);
-              }
-
-              if(r > rstop) discard;
-
-              vec3 col = mix(vec3(1.0, 0.8, 0.75), vec3(1.0, 0.9, 0.87), r);
-              float grady = mix(0.0, 1.0, pow(coord.y * 0.5 + 0.5, 0.35));
-              col *= vec3(1.0, grady, grady);
-              col *= mix(0.8, 1.0, pow(abs(coord.x), 0.3));
-              col = col * diffuse + specular;
-
-              col = mix(fadeCol, col, distancefade);
-
-              float alpha = (rstop > 0.001)? (0.5 - r / (rstop * 2.0)) : 1.0;
-              alpha = smoothstep(0.0, 1.0, alpha) * palpha;
-
-              gl_FragColor = vec4(col * 0.5, alpha);
-          }
-          </script>
-          <!-- effects -->
-          <script id="fx_common_vsh" type="x-shader/x_vertex">
-          uniform vec3 uResolution;
-          attribute vec2 aPosition;
-
-          varying vec2 texCoord;
-          varying vec2 screenCoord;
-
-          void main(void) {
-              gl_Position = vec4(aPosition, 0.0, 1.0);
-              texCoord = aPosition.xy * 0.5 + vec2(0.5, 0.5);
-              screenCoord = aPosition.xy * vec2(uResolution.z, 1.0);
-          }
-          </script>
-          <script id="bg_fsh" type="x-shader/x_fragment">
-          #ifdef GL_ES
-          //precision mediump float;
-          precision highp float;
-          #endif
-
-          uniform vec2 uTimes;
-
-          varying vec2 texCoord;
-          varying vec2 screenCoord;
-
-          void main(void) {
-              vec3 col;
-              float c;
-              vec2 tmpv = texCoord * vec2(0.8, 1.0) - vec2(0.95, 1.0);
-              c = exp(-pow(length(tmpv) * 1.8, 2.0));
-              col = mix(vec3(0.02, 0.0, 0.03), vec3(0.96, 0.98, 1.0) * 1.5, c);
-              gl_FragColor = vec4(col * 0.5, 1.0);
-          }
-          </script>
-          <script id="fx_brightbuf_fsh" type="x-shader/x_fragment">
-          #ifdef GL_ES
-          //precision mediump float;
-          precision highp float;
-          #endif
-          uniform sampler2D uSrc;
-          uniform vec2 uDelta;
-
-          varying vec2 texCoord;
-          varying vec2 screenCoord;
-
-          void main(void) {
-              vec4 col = texture2D(uSrc, texCoord);
-              gl_FragColor = vec4(col.rgb * 2.0 - vec3(0.5), 1.0);
-          }
-          </script>
-          <script id="fx_dirblur_r4_fsh" type="x-shader/x_fragment">
-          #ifdef GL_ES
-          //precision mediump float;
-          precision highp float;
-          #endif
-          uniform sampler2D uSrc;
-          uniform vec2 uDelta;
-          uniform vec4 uBlurDir; //dir(x, y), stride(z, w)
-
-          varying vec2 texCoord;
-          varying vec2 screenCoord;
-
-          void main(void) {
-              vec4 col = texture2D(uSrc, texCoord);
-              col = col + texture2D(uSrc, texCoord + uBlurDir.xy * uDelta);
-              col = col + texture2D(uSrc, texCoord - uBlurDir.xy * uDelta);
-              col = col + texture2D(uSrc, texCoord + (uBlurDir.xy + uBlurDir.zw) * uDelta);
-              col = col + texture2D(uSrc, texCoord - (uBlurDir.xy + uBlurDir.zw) * uDelta);
-              gl_FragColor = col / 5.0;
-          }
-          </script>
-          <!-- effect fragment shader template -->
-          <script id="fx_common_fsh" type="x-shader/x_fragment">
-          #ifdef GL_ES
-          //precision mediump float;
-          precision highp float;
-          #endif
-          uniform sampler2D uSrc;
-          uniform vec2 uDelta;
-
-          varying vec2 texCoord;
-          varying vec2 screenCoord;
-
-          void main(void) {
-              gl_FragColor = texture2D(uSrc, texCoord);
-          }
-          </script>
-          <!-- post processing -->
-          <script id="pp_final_vsh" type="x-shader/x_vertex">
-          uniform vec3 uResolution;
-          attribute vec2 aPosition;
-          varying vec2 texCoord;
-          varying vec2 screenCoord;
-          void main(void) {
-              gl_Position = vec4(aPosition, 0.0, 1.0);
-              texCoord = aPosition.xy * 0.5 + vec2(0.5, 0.5);
-              screenCoord = aPosition.xy * vec2(uResolution.z, 1.0);
-          }
-          </script>
-          <script id="pp_final_fsh" type="x-shader/x_fragment">
-          #ifdef GL_ES
-          //precision mediump float;
-          precision highp float;
-          #endif
-          uniform sampler2D uSrc;
-          uniform sampler2D uBloom;
-          uniform vec2 uDelta;
-          varying vec2 texCoord;
-          varying vec2 screenCoord;
-          void main(void) {
-              vec4 srccol = texture2D(uSrc, texCoord) * 2.0;
-              vec4 bloomcol = texture2D(uBloom, texCoord);
-              vec4 col;
-              col = srccol + bloomcol * (vec4(1.0) + srccol);
-              col *= smoothstep(1.0, 0.0, pow(length((texCoord - vec2(0.5)) * 2.0), 1.2) * 0.5);
-              col = pow(col, vec4(0.45454545454545)); //(1.0 / 2.2)
-
-              gl_FragColor = vec4(col.rgb, 1.0);
-              gl_FragColor.a = 1.0;
-          }
-          </script>
-
-
-
-              <script  src="contact.js"></script>
-
-
-
-
-          </body>
-
-          </html>
+    .twitter:hover{
+      background:#4099FF;
+      box-shadow: 0 0 0 2px #4099FF;
+    }
+
+
+    .sociali {
+      background:rgba(255,255,255,0.1);
+    	left: 50%;
+    	top: 0;
+    }
+
+    .sociali:hover{
+      background:#f34141;
+      box-shadow: 0 0 0 2px #f34141;
+    }
+
+    .codepen {
+      background:rgba(255,255,255,0.1);
+    	left: 75%;
+    	bottom: 0;
+    }
+
+    .codepen:hover{
+      background:#333333;
+      box-shadow: 0 0 0 2px #333333;
+    }
+
+
+    .mail {
+      background:rgba(255,255,255,0.1);
+      left: 100%;
+    	top: 0;
+    }
+
+    .mail:hover{
+      background:#1abc9c;
+      box-shadow: 0 0 0 2px #1abc9c;
+    }
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+  <div class="avatar"></div>
+    <h1>Gianluca Pirrera</h1>
+
+<div class="container">
+
+		<ul class="social">
+
+			<li class="facebook"><a href="#" class="entypo-facebook"></a></li>
+			<li class="twitter"><a href="#" class="entypo-twitter"></a></li>
+       <li class="sociali"><a href="#" class="entypo-mouse"></a></li>
+			<li class="codepen"><a href="#" class="entypo-code"></a></li>
+			<li class="mail"><a href="#" class="entypo-mail"></a></li>
+
+		</ul>
+
+	</div>
+
+
+
+
+</body>
+
+</html>
