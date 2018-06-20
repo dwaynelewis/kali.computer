@@ -3,86 +3,48 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Single contact page</title>
+  <title>Contact page layout v2</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
-<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Raleway:200,400'>
-
-
-
-
-		<style>
-
-		.overlay {
-		    height: 100%;
-		    width: 0;
-		    position: fixed;
-		    z-index: 1;
-		    top: 0;
-		    left: 0;
-		    background-color: rgb(0,0,0);
-		    background-color: rgba(0,0,0, 0.9);
-		    overflow-x: hidden;
-		    transition: 0.5s;
-
-		}
-
-
-		.overlay-content {
-		    position: relative;
-		    top: 25%;
-		    width: 100%;
-		    text-align: center;
-		    margin-top: 30px;
-		}
-
-		.overlay a {
-		    padding: 8px;
-		    text-decoration: none;
-		    font-size: 36px;
-		    color: white;
-		    display: block;
-		    transition: 0.3s;
-          font-family: 'Raleway', sans-serif;
-		}
-
-		.overlay a:hover, .overlay a:focus {
-		    color: #f1f1f1;
-		}
-
-		.overlay .closebtn {
-		    position: absolute;
-		    top: 20px;
-		    right: 45px;
-		    font-size: 60px;
-		}
-
-		@media screen and (max-height: 450px) {
-		  .overlay a {font-size: 20px}
-		  .overlay .closebtn {
-		    font-size: 40px;
-		    top: 15px;
-		    right: 35px;
-		  }
-		}
-		</style>
-
-
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Raleway:100,200,400'>
 
 <style>
+
+
+.pic {
+    /* The image used */
+    background-image: url("theme1c.jpg");
+
+    /* Full height */
+    height: 100vh;
+    width:100vw;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#links{
+  position: absolute;
+  top:50rem;
+  width: 100vw;
+  text-align: center;
+}
+
+
 html,
 body {
-  height: 100%
+  height: 100%;
+  margin:0
 }
 
 body {
   text-align: right;
   color: #fff;
   font-family: 'Raleway', sans-serif;
-  background: #999 url(her.jpg) center no-repeat;
-  background-size: cover;
+  font-size:15px;
+  /* background: #999 url(https://68.media.tumblr.com/483e268b5a51e25bc7285a998673caff/tumblr_oklucnlAfL1rp4pkco1_1280.jpg) center no-repeat;
+  background-size: cover; */
   overflow: hidden;
   padding-right: 50px
 }
@@ -97,25 +59,33 @@ body:before {
   height: 100%;
   z-index: -1
 }
-
+a{
+  color:inherit
+}
 h1 {
-  width: 100%;
-  margin: 40vh 0 3vh 0;
+  width: 62%;
+  position: absolute;
+  top:40rem;
   font-family: 'Raleway', sans-serif;
   font-weight: 100;
-  font-size: 3em
+  font-size: 3em;
+  transition:all 0.4s
 }
-
+h1:hover{
+  color:#08c
+}
 i {
   display: block;
-  width: 100%;
-  margin-bottom: 4vh
+  width: 58%;
+  position: absolute;
+  top:46rem;
+  font-size:1em
 }
 
 .fa {
   display: inline-block;
-  background: #037;
-  color: #ddd;
+  color: inherit;
+  border:1px solid;
   text-decoration: none;
   padding-top: 12px;
   width: 40px;
@@ -123,153 +93,78 @@ i {
   text-align: center;
   border-radius: 20%;
   box-sizing: border-box;
-  margin-left: 15px;
-  box-shadow: 0 -50px 0 0 rgba(0, 0, 0, 0) inset;
+  margin-left: 1em;
+  background: rgba(0, 0, 0, 0);
   transition: all 0.4s;
 }
 
 .fa:hover {
-  color: #fff;
-  box-shadow: 0 -50px 0 0 rgba(0, 0, 0, 0.5) inset
+  color: #05a;
+  border-color:inherit;
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.fa:nth-of-type(2) {
-  background: #08c
+.fa:nth-of-type(2):hover {
+  color: #09c;
+  border-color:inherit
 }
 
-.fa:nth-of-type(3) {
-  background: #d10
+.fa:nth-of-type(3):hover {
+  color: #d19;
+  border-color:inherit
+
 }
 
-.fa:nth-of-type(4) {
-  background: #eb0
+.fa:nth-of-type(4):hover {
+  color: #e90;
+  border-color:inherit
 }
 
-.fa:nth-of-type(5) {
-  background: #0c6
+.fa:nth-of-type(5):hover {
+  color: #0c6;
+  border-color:inherit
+}
+
+footer{
+  font-size: 0.7em;
+  text-align: center;
+  color: #666;  background:rgba(0,0,0,0.4);
+  width: 100vw;
+  position: absolute;
+  bottom: 0px;
+  padding:0.8em 0;
+}
+.white{
+  color:#333
+}
+.white:before{
+  background: rgba(240, 240, 240, 0.8);
+}
+.white footer, .white .fa:hover{
+  background-color:rgba(250, 250, 2520, 0.4);
 }
 </style>
-
-      <style>
-      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
-      html,
-body {
-  height: 100%
-}
-
-body {
-  text-align: right;
-  color: #fff;
-  font-family: 'Raleway', sans-serif;
-  background: #999 url(herc.jpg) center no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  padding-right: 50px
-}
-
-body:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(40, 40, 45, 0.8);
-  width: 100%;
-  height: 100%;
-  z-index: -1
-}
-
-h1 {
-  width: 100%;
-  margin: 40vh 0 3vh 0;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 100;
-  font-size: 3em
-}
-
-i {
-  display: block;
-  width: 100%;
-  margin-bottom: 4vh
-}
-
-.fa {
-  display: inline-block;
-  background: #037;
-  color: #ddd;
-  text-decoration: none;
-  padding-top: 12px;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  border-radius: 20%;
-  box-sizing: border-box;
-  margin-left: 15px;
-  box-shadow: 0 -50px 0 0 rgba(0, 0, 0, 0) inset;
-  transition: all 0.4s;
-}
-
-.fa:hover {
-  color: #fff;
-  box-shadow: 0 -50px 0 0 rgba(0, 0, 0, 0.5) inset
-}
-
-.fa:nth-of-type(2) {
-  background: #08c
-}
-
-.fa:nth-of-type(3) {
-  background: #d10
-}
-
-.fa:nth-of-type(4) {
-  background: #eb0
-}
-
-.fa:nth-of-type(5) {
-  background: #0c6
-}
-    </style>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
 </head>
 
 <body>
+  <div class="pic">
 
-  <h1>Your Name Here</h1>
-<i>Profession and Title</i>
+  <h1>Your Name</h1>
+<i>Occupation & Title</i>
+<div id="links">
 <a href="#" class="fa fa-facebook"></a>
 <a href="#" class="fa fa-twitter"></a>
-<a href="#" class="fa fa-instagram"></a>
-<a href="#" class="fa fa-linkedin"></a>
-<a href="#" class="fa fa-pinterest"></a>
-
-<div style="font-size: 12px;  text-align: center;  color: #666;  background:rgba(0,0,0,0.7);  width: 100vw;  position: absolute;  bottom: 0px;  opacity: 0.9;padding:5px 0;">KALI</div>
-
-
-	<div id="myNav" class="overlay">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<div class="overlay-content">
-			<a href="aboutme.html">ABOUT</a>
-			<a href="work.html">WORK</a>
-			<a href="home.html">HOME</a>
-		</div>
-	</div>
+<a href="#" class="fa fa-behance"></a>
+<a href="#" class="fa fa-codepen"></a>
+<a href="#" class="fa fa-github"></a>
+</div>
+<footer>  <a href="#" onClick="document.body.classList.toggle('white')">White layout</a>  | Follow me on <a href="" target="_b">Twitter</a> new <a href="http://codepen.com/nodws" target="_b">Pen</a> each week</footer>
 
 
-  	<span style="position: absolute; top:0; left:0; font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+</div>
 
-  <script>
-  function openNav() {
-      document.getElementById("myNav").style.width = "100%";
-  }
 
-  function closeNav() {
-      document.getElementById("myNav").style.width = "0%";
-  }
-  </script>
-
-    <script  src="js/index.js"></script>
 
 
 
