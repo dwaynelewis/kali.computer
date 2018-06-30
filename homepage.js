@@ -26,7 +26,7 @@ THE SOFTWARE.
 */
 (function( $ ){
   $.fn.introtzikas = function(options) {
-	  
+
 		var defaults = {
 			line   : '#F00',
 			speedwidth	 : 2000,
@@ -36,7 +36,7 @@ THE SOFTWARE.
 			lineheight : 2
 		};
 		var options = $.extend(defaults, options);
-  
+
   		$('iframe').hide();
 		$('body').css('overflow-y','hidden');
 		$('<div class="introtzikas_bg" style="visibility:visible"><div class="introtzikas" style="visibility:visible"></div></div>').appendTo('body');
@@ -48,7 +48,7 @@ THE SOFTWARE.
   		$('.introtzikas_bg').css('top','0');
   		$('.introtzikas_bg').css('left','0');
   		$('.introtzikas_bg').css('visibility','visible');
-  
+
 		$('body').css('visibility','hidden');
 		$('.introtzikas').css('background-color',options.line);
 		$('.introtzikas').css('position','fixed');
@@ -72,11 +72,11 @@ THE SOFTWARE.
 							  $('.introtzikas_bg').remove();
 							  $('iframe').show();
 							  $('body').css('overflow-y','visible');
-							  
+
 						  });
-						  
+
 				  });
-		
+
 		  });
   };
 })( jQuery );
@@ -98,7 +98,7 @@ $('#sizePicker').submit(function (event) {
 });
 
 function makeGrid(x, y) {
-	$('tr').remove(); // once we hit submit button we can now remove previous grid targeting any table rows 
+	$('tr').remove(); // once we hit submit button we can now remove previous grid targeting any table rows
 
 // Your code goes here!
 
@@ -110,7 +110,7 @@ function makeGrid(x, y) {
             }
 
 
-// Adding color which gets applied into cell based on user's interaction 
+// Adding color which gets applied into cell based on user's interaction
 	$('td').click(function addColor(){
 		color = $('#colorPicker').val();
 
@@ -119,20 +119,20 @@ function makeGrid(x, y) {
 		}else {
 			$(this).attr('style', 'background-color:' + color);
 		}
-	})                      
+	})
 }
 
 // opening page animation
 $().introtzikas({
-   line: '#0ba59f', 
-   speedwidth: 2000, 
-   speedheight: 1000, 
-   bg: '#450528',
+   line: 'red',
+   speedwidth: 2000,
+   speedheight: 1000,
+   bg: 'black',
    lineheight: 2
 });
 
 
-// animating letter 
+// animating letter
 var $a = $('h1');
 
 $a.blast({
@@ -150,3 +150,17 @@ $a.blast({
             }, 100);
       }
    });
+
+
+
+
+   	 //CLOCK
+   	var myVar = setInterval(function(){ myTimer() }, 1000);
+   	function myTimer() {
+   	    var d = new Date();
+   	    var t = d.toLocaleTimeString();
+   	    document.getElementById("time").innerHTML = t;
+   	}
+   	function myStopFunction() {
+   	    clearInterval(myVar);
+   	}

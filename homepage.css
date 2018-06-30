@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Jura');
+body {
+    text-align: center;
+    background:  url(http://res.cloudinary.com/doijyfiv5/image/upload/q_92/v1523417961/official_xyf206.jpg) top left;
+    width: 85%;
+    margin:  0 auto;
+    font-family: Jura, Helvetica, sans-serif;
+  font-size: 1em;
+}
+#sun{
+  height: 6vh;
+  width: 12vw;
+  position: absolute;
+  top:21rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+}
+#logom{
+  height: 9vh;
+  width: 18.35vw;
+  position: absolute;
+  top:32rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+}
+  .time{
+    font-size: 2rem;
+    text-align: center;
+    position: absolute;
+    top:65rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  #time{
+    position: absolute;
+    left:0;
+    right:0;
+    z-index: 1;
+    color:black;
+  }
