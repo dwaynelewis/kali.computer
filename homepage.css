@@ -62,3 +62,15 @@ body {
     z-index: 1;
     color:white;
   }
+#contact{
+  position: absolute;
+  top:65rem;
+  left: 0;
+  background-color: white;
+  height: 10rem;
+  width:100vw;
+}
+i{
+  font-size:200%;
+  margin: 1rem;
+}
