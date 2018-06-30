@@ -66,6 +66,9 @@
       position: relative;
       text-align: center;
     }
+    #faqh{
+      display: none;
+    }
 
         #restart{
       display: none;
@@ -377,7 +380,7 @@ position: absolute;
 
 
 
-
+<div id="faqh">
 
   <img id="logom" src="kalilogor.png" class="intro animated zoomInDown" alt="Kali logo">
 
@@ -450,8 +453,8 @@ position: absolute;
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
     <a href="aboutus.html">About Us</a>
-     <a href="themes.html">Themes</a>
-      <a href="home.html">Home</a>
+     <a href="oldindex.html">Themes</a>
+      <a href="index.html">Home</a>
 
 
   </div>
@@ -628,7 +631,14 @@ document.getElementById("demo").innerHTML = "Based off of your responses we sugg
 
       <script  src="homepage.js"></script>
 
+      <script>
+     $(document).ready(function(){
+         $(function(){
 
+             $("#faqh").delay(5000).fadeIn("slow");
+         });
+     });
+     </script>
 
           <script>
           function openNav() {
