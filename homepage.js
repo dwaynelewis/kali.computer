@@ -124,10 +124,10 @@ function makeGrid(x, y) {
 
 // opening page animation
 $().introtzikas({
-   line: 'darkred',
+   line: '#C80000',
    speedwidth: 2000,
    speedheight: 1000,
-   bg: 'black',
+   bg: ' #181818',
    lineheight: 2
 });
 
