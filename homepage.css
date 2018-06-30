@@ -113,6 +113,7 @@ i{
   height: 10rem;
   width:100vw;
 }
+
 .ftime{
   font-size: 3rem;
   text-align: center;
@@ -121,4 +122,12 @@ i{
   left: 0;
   right: 0;
   margin: auto;
+}
+#ftime{
+  position: absolute;
+  left:0;
+  right:0;
+  z-index: 1;
+  color:white;
+  font-size: 3rem;
 }

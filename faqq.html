@@ -8,12 +8,31 @@
 
 
       <link rel="stylesheet" href="homepage.css">
+        <link rel="stylesheet" href="faq.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
 
     <link rel="stylesheet" href="menu.css">
+    <!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '258376804924657');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=258376804924657&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
     <script type="text/javascript">
    $(document).ready(function() {
       $().introtzikas();
@@ -21,7 +40,9 @@
 </script>
 </head>
 <body>
-
+  <script>
+  fbq('track', 'ViewContent');
+</script>
 
 
       <img id="flogom" src="kalilogor.png" class="intro animated zoomIn" alt="Kali logo">
@@ -29,7 +50,7 @@
 
 
 
-      	<div class="ftime"><p id="time" ></p></div>
+      	<div class="ftime"><p id="ftime" ></p></div>
 <div id="fcontact">
 
  <a href="https://www.facebook.com/Kalitechnology-181198399253312/" id="fb" class="intro animated slideInLeft"><i style="color:#C80000;  font-size: 75px;" class="fa fa-facebook-official"></i></a>
@@ -46,11 +67,80 @@
     <a href="aboutus.html">About Us</a>
      <a href="themes.html">Themes</a>
     <a href="home.html">Home</a>
-    
+
 
 </div>
 </div>
 <span style="cursor:pointer" onclick="openNav()">&#9776;</span>
+
+
+
+
+
+
+      <h3 id="opening">These questions will help identify templates that we can customize for you.</h3>
+
+
+
+            <div id="restart">
+      <a href="http://kali.technology/faq.html" target="_blank">Start Again</a>
+            </div>
+
+
+
+        <button id= "getstarted">Get started</button>
+      <div id="ques1" class="questions">
+        <p>What style of website site are you interested in?</p>
+      <button id = "choice1a" type="button" class="btn btn-outline-light text-light">Entrepreneur</button><br>
+      <button id = "choice1b" type="button" class="btn btn-outline-light text-light">Business Professional</button>
+
+        </div>
+
+      <!-- <button id="ques1-5">Are you ready for the next question?</button> -->
+
+      <div id="ques2" class="questions">
+        <p> What function do you want your site to perform?</p>
+      <button id = "choice2a" type="button" class="btn btn-outline-light text-light">Resume</button><br>
+      <button id = "choice2b" type="button" class="btn btn-outline-light text-light">Business Hub</button>
+            </div>
+
+
+      <div id="ques3" class="questions">
+        <p>Is status important?</p>
+      <button id = "choice3a" type="button" class="btn btn-outline-light text-light">Yes</button><br>
+      <button id = "choice3b" type="button" class="btn btn-outline-light text-light">No</button>
+            </div>
+
+
+            <h2 id= "demo"></h2>
+
+
+
+      <div id="eb">
+
+          <a href="http://kali.digital/" id="link1">CLASSIC</a>
+      </div>
+
+
+      <div id="el">
+          <a href="modern/modern.html"  id="link2">MODERN</a>
+      </div>
+
+      <div id="pb">
+          <a href="http://kali.computer/" id="link3">FUNKY</a>
+      </div>
+
+
+      <div id="pl">
+        <a href="minimal.html"  id="link4">MINIMAL</a>
+      </div>
+
+
+      <div id="pl">
+        <a href="resume/index.html" id="link5">PORTFOLIO</a>
+      </div>
+
+
 
 
 </body>
@@ -77,6 +167,158 @@
             document.getElementById("myNav").style.width = "0%";
         }
         </script>
+
+
+
+
+
+            <script>
+                var ans1 = false;
+                var ans2 = false;
+                var ans3 = false;
+                document.getElementById("getstarted").onclick = function firstQuestion(){
+                document.getElementById("getstarted").style.display = "none";
+                document.getElementById("opening").style.display = "none";
+                document.getElementById("ques1").style.display = "block";
+                document.getElementById("choice1a").style.display = "block";
+                document.getElementById("choice1b").style.display = "block";
+              };
+                document.getElementById("choice1a").onclick = function firstAnswer(){
+                document.getElementById("ques1").style.display = "none";
+                document.getElementById("choice1a").style.display = "none";
+                document.getElementById("choice1b").style.display = "none";
+                document.getElementById("ques2").style.display = "block";
+                document.getElementById("choice2a").style.display = "block";
+                document.getElementById("choice2b").style.display = "block";
+                ans1 = true;
+              };
+                document.getElementById("choice1b").onclick = function firstAnswer(){
+                document.getElementById("ques1").style.display = "none";
+                document.getElementById("choice1a").style.display = "none";
+                document.getElementById("choice1b").style.display = "none";
+                document.getElementById("ques2").style.display = "block";
+                document.getElementById("choice2a").style.display = "block";
+                document.getElementById("choice2b").style.display = "block";
+                ans1 = false;
+              };
+                document.getElementById("choice2a").onclick = function secondAnswer(){
+                  document.getElementById("ques3").style.display = "block";
+                document.getElementById("choice3a").style.display = "block";
+                document.getElementById("choice3b").style.display = "block";
+                document.getElementById("ques2").style.display = "none";
+                document.getElementById("choice2a").style.display = "none";
+                document.getElementById("choice2b").style.display = "none";
+                ans2 = true;
+              };
+                document.getElementById("choice2b").onclick = function secondAnswer(){
+                  document.getElementById("ques3").style.display = "block";
+                document.getElementById("choice3a").style.display = "block";
+                document.getElementById("choice3b").style.display = "block";
+                document.getElementById("ques2").style.display = "none";
+                document.getElementById("choice2a").style.display = "none";
+                document.getElementById("choice2b").style.display = "none";
+                 ans2 = false;
+               };
+              document.getElementById("choice3a").onclick = function total(){
+                document.getElementById("ques3").style.display = "none";
+                document.getElementById("choice3a").style.display = "none";
+                document.getElementById("choice3b").style.display = "none";
+               document.getElementById("restart").style.display = "block";
+               ans3 = true;
+               if (ans1 === true && ans2 === true && ans3 === false){
+           document.getElementById("demo").style.display = "block";
+         document.getElementById("demo").innerHTML = "Based off of your responses we suggest you take a look at the links below.";
+          document.getElementById("link1").style.display = "block";
+            document.getElementById("link3").style.display = "block";
+             }
+             if (ans1 === true && ans2 === false && ans3 === false){
+         document.getElementById("demo").style.display = "block";
+        document.getElementById("demo").innerHTML = "Based off of your responses we suggest you take a look at the link below.";
+          document.getElementById("link3").style.display = "block";
+           }
+           if (ans1 === true && ans2 === true && ans3 === true){
+        document.getElementById("demo").style.display = "block";
+        document.getElementById("demo").innerHTML = "Based off of your responses we suggest you take a look at the link below.";
+          document.getElementById("link5").style.display = "block";
+         }
+         if (ans1 === true && ans2 === false && ans3 === true){
+        document.getElementById("demo").style.display = "block";
+        document.getElementById("demo").innerHTML = "Based off of your responses we suggest you take a look at the link below.";
+          document.getElementById("link5").style.display = "block";
+        }
+        if (ans1 === false && ans2 === true && ans3 === false){
+        document.getElementById("demo").style.display = "block";
+        document.getElementById("demo").innerHTML = "Based off of your responses we suggest you take a look at the links below.";
+          document.getElementById("link2").style.display = "block";
+            document.getElementById("link4").style.display = "block";
+        }
+        if (ans1 === false && ans2 === false && ans3 === false){
+        document.getElementById("demo").style.display = "block";
+        document.getElementById("demo").innerHTML = "Based off of your responses we suggest you take a look at the link below.";
+          document.getElementById("link2").style.display = "block";
+        }
+        if (ans1 === false && ans2 === true && ans3 === true){
+        document.getElementById("demo").style.display = "block";
+        document.getElementById("demo").innerHTML = "Based off of your responses we suggest you take a look at the link below.";
+          document.getElementById("link5").style.display = "block";
+        }
+        if (ans1 === false && ans2 === false && ans3 === true){
+        document.getElementById("demo").style.display = "block";
+        document.getElementById("demo").innerHTML = "Based off of your responses we suggest you take a look at the link below.";
+          document.getElementById("link5").style.display = "block";
+        }
+         };
+                      document.getElementById("choice3b").onclick = function total(){
+                        document.getElementById("ques3").style.display = "none";
+                        document.getElementById("choice3a").style.display = "none";
+                        document.getElementById("choice3b").style.display = "none";
+                       document.getElementById("restart").style.display = "block";
+                       ans3 = false;
+                       if (ans1 === true && ans2 === true && ans3 === false){
+                   document.getElementById("demo").style.display = "block";
+                 document.getElementById("demo").innerHTML = "Based off of your responses we suggest you take a look at the links below.";
+                  document.getElementById("link1").style.display = "block";
+                    document.getElementById("link3").style.display = "block";
+                     }
+                     if (ans1 === true && ans2 === false && ans3 === false){
+                 document.getElementById("demo").style.display = "block";
+                document.getElementById("demo").innerHTML = "Based off of your responses we suggest you take a look at the link below.";
+                  document.getElementById("link3").style.display = "block";
+                   }
+                   if (ans1 === true && ans2 === true && ans3 === true){
+                document.getElementById("demo").style.display = "block";
+                document.getElementById("demo").innerHTML = "Based off of your responses we suggest you take a look at the link below.";
+                  document.getElementById("link5").style.display = "block";
+                 }
+                 if (ans1 === true && ans2 === false && ans3 === true){
+                document.getElementById("demo").style.display = "block";
+                document.getElementById("demo").innerHTML = "Based off of your responses we suggest you take a look at the link below.";
+                  document.getElementById("link5").style.display = "block";
+                }
+                if (ans1 === false && ans2 === true && ans3 === false){
+                document.getElementById("demo").style.display = "block";
+                document.getElementById("demo").innerHTML = "Based off of your responses we suggest you take a look at the links below.";
+                  document.getElementById("link2").style.display = "block";
+                    document.getElementById("link4").style.display = "block";
+                }
+                if (ans1 === false && ans2 === false && ans3 === false){
+                document.getElementById("demo").style.display = "block";
+                document.getElementById("demo").innerHTML = "Based off of your responses we suggest you take a look at the link below.";
+                  document.getElementById("link2").style.display = "block";
+                }
+                if (ans1 === false && ans2 === true && ans3 === true){
+                document.getElementById("demo").style.display = "block";
+                document.getElementById("demo").innerHTML = "Based off of your responses we suggest you take a look at the link below.";
+                  document.getElementById("link5").style.display = "block";
+                }
+                if (ans1 === false && ans2 === false && ans3 === true){
+                document.getElementById("demo").style.display = "block";
+                document.getElementById("demo").innerHTML = "Based off of your responses we suggest you take a look at the link below.";
+                  document.getElementById("link5").style.display = "block";
+                }
+                            };
+            </script>
+
 
 
 </body>

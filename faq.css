@@ -1,0 +1,103 @@
+
+html{
+  color: white;
+}
+#opening{
+position: absolute;
+top: 30rem;
+font-size: 2rem;
+}
+#demo{
+top:18rem;
+position: absolute;
+}
+#getstarted{
+  width: 100px;
+  background-color: white;
+  color:#181818;
+  padding: 3px;
+  font-size: 200%;
+  position: absolute;
+  left:0;
+  right:0;
+  margin: auto;
+  top:40rem;
+  border-radius: 5%;
+}
+.questions{
+  display: none;
+  width: 20rem;
+  left:0;
+  right:0;
+  margin: auto;
+  position: absolute;
+  top:24rem;
+}
+button{
+  left:0;
+  right:0;
+  margin: 1px;
+  position: absolute;
+  width: auto;
+  color: white;
+}
+#restart{
+  top:40rem;
+  left:0;
+  right:0;
+  margin: auto;
+}
+  #goodbye{
+    top:28rem;
+    left:0rem;
+    right: 0;
+    margin: auto;
+  }
+  #link1{
+    position: absolute;
+    top:28rem;
+    left:0rem;
+    right: 0;
+    margin: auto;
+      display: none;
+    font-size: 32px;
+  }
+  #link2{
+    position: absolute;
+    top:29rem;
+    left:0rem;
+    right: 0;
+    margin: auto;
+      display: none;
+        font-size: 32px;
+  }
+  #link3{
+    position: absolute;
+    top:30rem;
+    left:0rem;
+    right: 0;
+    margin: auto;
+      display: none;
+        font-size: 32px;
+  }
+  #link4{
+    position: absolute;
+    top:31rem;
+    left:0rem;
+    right: 0;
+    margin: auto;
+      display: none;
+        font-size: 32px;
+  }
+  #link5{
+    position: absolute;
+    top:32rem;
+    left:0rem;
+    right: 0;
+    margin: auto;
+      display: none;
+        font-size: 32px;
+  }
+  p{
+    font-size: 60px;
+  }
