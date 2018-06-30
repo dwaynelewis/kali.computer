@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu.css">
     <script type="text/javascript">
    $(document).ready(function() {
       $().introtzikas();
@@ -46,14 +46,26 @@
       	<div class="time"><p id="time" ></p></div>
 <div id="contact">
 
- <i href="callto:1-213-277-8118"class="fa fa-phone-square" style="font-size: 75px;color:#C80000"></i>
-
-
  <a href="https://www.facebook.com/Kalitechnology-181198399253312/" id="fb" class="intro animated slideInLeft"><i style="color:#C80000;  font-size: 75px;" class="fa fa-facebook-official"></i></a>
  <a href="mailto:info@kali.technology" id="email" class="intro animated slideInRight"><i style=" color:#C80000 ; font-size: 75px;" class="fa">&#xf0e0;</i></a>
  <a href="https://www.instagram.com/kali.technology/" id="ig" class="intro animated slideInRight"><i style="color:#C80000; font-size: 75px;" class="fa fa-instagram"></i>
 
 </div>
+<div id="ph">T:+1-213-277-8118</div>
+
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="aboutus.html">About Us</a>
+    <a href="faq.html">FAQ</a>
+     <a href="themes.html">Themes</a>
+
+</div>
+</div>
+<span style="cursor:pointer" onclick="openNav()">&#9776;</span>
+
+
 </body>
 
 
@@ -79,6 +91,17 @@
      interval: 3.0
     })
     </script>
+
+
+
+        <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+        </script>
 
 
 </body>

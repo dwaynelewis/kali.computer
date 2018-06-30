@@ -2,7 +2,7 @@
 body {
     text-align: center;
   background-color: #181818;
-    width: 85%;
+    width: 100vw;
     margin:  0 auto;
     font-family: Jura, Helvetica, sans-serif;
   font-size: 1em;
@@ -73,4 +73,14 @@ body {
 i{
   font-size:200%;
   margin: 1rem;
+}
+
+#ph{
+  position: absolute;
+  top:75rem;
+  left: 0;
+  font-size: 3rem;
+  color:white;
+  height: 10rem;
+  width:100vw;
 }

@@ -12,6 +12,21 @@
   		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script type="text/javascript" src="textition.js"></script>
       <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+            <link rel="stylesheet" href="homepage.css">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+
+          <link rel="stylesheet" href="menu.css">
+          <script type="text/javascript">
+         $(document).ready(function() {
+            $().introtzikas();
+         });
+      </script>
+
+
       <!-- Facebook Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
@@ -34,101 +49,6 @@
 
 
 
-	  <style>
-	  @keyframes spinner {
-	    100% {
-	      transform: rotate(3600deg);
-	    }
-	  }
-	  .loading-container {
-	    margin: 0 auto;
-	    text-align: center;
-	    position: relative;
-	    top: 20vh;
-	    transform: translateY(-50%);
-	  }
-	  .spinner {
-	    display: inline-block;
-	    width: 100px;
-	    height: 100px;
-	    background: url('http://i.imgur.com/oSHLAzp.png') center center;
-	    background-size: contain;
-	    transition-origin: 50% 50%;
-	    animation: spinner 3s infinite alternate ease-in-out;
-	  }
-	  .spinner-center {
-	    display: inline-block;
-	    position: absolute;
-	    margin-left: -100px;
-	    width: 100px;
-	    height: 100px;
-	    background: url('http://i.imgur.com/u0BC2ZR.png') center center;
-	    background-size: contain;
-	    content: '';
-	  }
-    #logoi{
-    height: 12vh;
-    width: 24.35vw;
-      text-align: center;
-      margin-top: 7rem;
-      z-index: 1;
-    }
-    a{
-      text-decoration: none;
-    }
-    p{
-      font-size: 24px;
-    }
-	</style>
-
-<style>
-        		.overlay {
-              text-align: center;
-        		    height: 100%;
-        		    width: 0;
-        		    position: fixed;
-        		    z-index: 1;
-        		    top: 0;
-        		    left: 0;
-        		    background-color: white;
-        				opacity: .8;
-        		    overflow-x: hidden;
-        		    transition: 0.5s;
-        		}
-        		.overlay-content {
-        		    position: relative;
-        		    top: 25%;
-        		    width: 66%;
-        		    text-align: center;
-        		    margin-top: 30px;
-                margin: auto;
-        		}
-        		.overlay a {
-        		    padding: 8px;
-        		    text-decoration: none;
-        		    font-size: 36px;
-        		    color: black;
-        		    display: block;
-        		    transition: 0.3s;
-        		}
-        		.overlay a:hover, .overlay a:focus {
-        		    color: navy;
-        		}
-        		.overlay .closebtn {
-        		    position: absolute;
-        		    top: 20px;
-        		    right: 45px;
-        		    font-size: 60px;
-        		}
-        		@media screen and (max-height: 450px) {
-        		  .overlay a {font-size: 20px}
-        		  .overlay .closebtn {
-        		    font-size: 40px;
-        		    top: 15px;
-        		    right: 35px;
-        		  }
-        		}
-</style>
 <style>
     *{
       margin: 0;
@@ -146,16 +66,7 @@
       position: relative;
       text-align: center;
     }
-      #intro{
-        height: 110rem;
-        background-color: white;
-      }
-    #outro{
-    background-color:#181818 ;
-    display: none;
-    width: 100%;
-    height: 100%;
-  }
+
         #restart{
       display: none;
        text-align: center;
@@ -216,15 +127,10 @@ position: absolute;
       right:0;
       margin: auto;
     }
-    span{
-      position: absolute;
-      top:0;
-      left: 0rem;
-      color: white;
-    }
+
     #logom{
       position: absolute;
-      top:2rem;
+      top:10rem;
       left:0rem;
       right: 0;
       margin: auto;
@@ -470,24 +376,12 @@ position: absolute;
 </script>
 
 
-  <div id="intro">
-<img id="logoi" src="kalilogor.png" alt="Kali logo">
-      <div class="loading-container">
-      <div class="spinner"></div>
-      <div class="spinner-center"></div>
-    </div>
-  </div>
 
 
-        <div id="outro">
+
   <img id="logom" src="kalilogor.png" class="intro animated zoomInDown" alt="Kali logo">
 
-  					  <nav id="nav2">
-  					    <a id="abu" href="home.html"title="navi4">HOME</a>
-  					  	<a href="themes.html" title="navi5">THEMES</a>
-  					  	<a href="faq.html" title="navi5">FAQ</a>
-  					  		<a id="con" href="contact.html" title="navi6">CONTACT</a>
-  					  	</nav>
+
 
       <h3 id="opening">These questions will help identify templates that we can customize for you.</h3>
 
@@ -556,19 +450,14 @@ position: absolute;
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
     <a href="aboutus.html">About Us</a>
-    <a href="contact.html">Contact</a>
      <a href="themes.html">Themes</a>
       <a href="home.html">Home</a>
-
-
-
-    <a href="mailto:info@kali.technology" id="email"><i style=" color:black; font-size: 60px;" class="fa">&#xf282;</i></a>
 
 
   </div>
 </div>
 
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<span style="cursor:pointer;font-size:60px;" onclick="openNav()">&#9776;</span>
 
 
 
@@ -727,35 +616,28 @@ document.getElementById("demo").innerHTML = "Based off of your responses we sugg
     </script>
 
 
-
-    <script> //INTRO
-    $(document).ready(function(){
-    	$(function(){
-    			$("#intro").delay(1000).fadeOut("slow");
-    	 });
-    });
-    </script>
-    <script>
-    $(document).ready(function(){
-    	$(function(){
-    			$("#outro").delay(1000).fadeIn("slow");
-    	});
-    });
-    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/0.11.6/jquery.velocity.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/0.11.6/velocity.ui.js'></script>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2/jquery.blast.js'></script>
 
 
 
 
 
-    <script>
-    function openNav() {
-        document.getElementById("myNav").style.width = "100%";
-    }
-    function closeNav() {
-        document.getElementById("myNav").style.width = "0%";
-    }
-    </script>
 
+      <script  src="homepage.js"></script>
+
+
+
+          <script>
+          function openNav() {
+              document.getElementById("myNav").style.width = "100%";
+          }
+          function closeNav() {
+              document.getElementById("myNav").style.width = "0%";
+          }
+          </script>
 
 
 
