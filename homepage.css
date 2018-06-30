@@ -131,3 +131,15 @@ i{
   color:white;
   font-size: 3rem;
 }
+
+
+
+#logoma{
+  height: 9vh;
+  width: 18.35vw;
+  position: absolute;
+  top:0rem;
+  left: 12rem;
+  margin: auto;
+  z-index: 1;
+}

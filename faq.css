@@ -5,10 +5,12 @@ html{
 #opening{
 position: absolute;
 top: 30rem;
-font-size: 2rem;
+font-size: 4rem;
 }
 #demo{
-top:18rem;
+top:48rem;
+font-size: 3rem;
+
 position: absolute;
 }
 #getstarted{
@@ -21,7 +23,7 @@ position: absolute;
   left:0;
   right:0;
   margin: auto;
-  top:40rem;
+  top:60rem;
   border-radius: 5%;
 }
 .questions{
@@ -40,8 +42,10 @@ button{
   position: absolute;
   width: auto;
   color: white;
+  font-size: 3rem;
 }
 #restart{
+  position: absolute;
   top:40rem;
   left:0;
   right:0;
@@ -55,49 +59,85 @@ button{
   }
   #link1{
     position: absolute;
-    top:28rem;
+    top:70rem;
     left:0rem;
     right: 0;
     margin: auto;
       display: none;
-    font-size: 32px;
+
   }
   #link2{
     position: absolute;
-    top:29rem;
+    top:75rem;
     left:0rem;
     right: 0;
     margin: auto;
       display: none;
-        font-size: 32px;
+
   }
   #link3{
     position: absolute;
-    top:30rem;
+    top:80rem;
     left:0rem;
     right: 0;
     margin: auto;
       display: none;
-        font-size: 32px;
+
   }
   #link4{
     position: absolute;
-    top:31rem;
+    top:65rem;
     left:0rem;
     right: 0;
     margin: auto;
       display: none;
-        font-size: 32px;
+
   }
   #link5{
     position: absolute;
-    top:32rem;
+    top:60rem;
     left:0rem;
     right: 0;
     margin: auto;
       display: none;
-        font-size: 32px;
+
   }
   p{
     font-size: 60px;
+  }
+
+
+  .btn{
+    display:none;
+    font-size:3rem;
+  }
+    #demo{
+    display: none;
+  }
+  #choice1a{
+      top:36rem;
+  }
+  #choice1b{
+      top:40rem;
+  }
+  #choice2a{
+      top:36rem;
+  }
+  #choice2b{
+      top:40rem;
+  }
+  #choice3a{
+      top:36rem;
+  }
+  #choice3b{
+      top:40rem;
+  }
+    #goodbye{
+    display: none;
+    position: absolute;
+  }
+  a{
+    color: white;
+    font-size: 3rem;
+    text-decoration: none;
   }
