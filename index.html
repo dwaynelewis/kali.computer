@@ -35,6 +35,19 @@
 
 
 
+      		<div id="autoplay" >
+
+      	 
+
+      	 <div class="textef">Control your Google narrative</div>
+
+      	 <div class="textef">Use as your resume</div>
+
+      	<div class="textef">Professionalize your brand</div>
+
+      	</div>
+
+
       	<div class="time"><p id="time" ></p></div>
 
 </body>
@@ -51,6 +64,23 @@
     <script  src="homepage.js"></script>
 
 
+    <script type="text/javascript" src="textition.js"></script>
+
+    <script>
+    $('#autoplay').textition({
+
+     speed: 1,
+
+     animation: 'ease-out',
+
+     map: {x: 200, y: 100, z: 0},
+
+     autoplay: true,
+
+     interval: 3.0
+
+    })
+    </script>
 
 
 </body>
