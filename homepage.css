@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Jura');
 body {
     text-align: center;
-    background:  url(http://res.cloudinary.com/doijyfiv5/image/upload/q_92/v1523417961/official_xyf206.jpg) top left;
+  background-color: #181818;
     width: 85%;
     margin:  0 auto;
     font-family: Jura, Helvetica, sans-serif;
@@ -43,7 +43,7 @@ body {
 	  font-size: 3rem;
 
 	  border-radius: 15%;
-		color:;
+		color:white;
 
 	}
   .time{
@@ -60,5 +60,5 @@ body {
     left:0;
     right:0;
     z-index: 1;
-    color:black;
+    color:white;
   }
