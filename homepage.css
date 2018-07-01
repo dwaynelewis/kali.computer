@@ -28,7 +28,7 @@ background-color: #181818;
   height: 6vh;
   width: 12vw;
   position: absolute;
-  top:24rem;
+  top:15rem;
   left: 0;
   right: 0;
   margin: auto;
@@ -38,7 +38,7 @@ background-color: #181818;
   height: 9vh;
   width: 18.35vw;
   position: absolute;
-  top:32rem;
+  top:24rem;
   left: 0;
   right: 0;
   margin: auto;
@@ -67,7 +67,7 @@ background-color: #181818;
     font-size: 3rem;
     text-align: center;
     position: absolute;
-    top:57rem;
+    top:82rem;
     left: 0;
     right: 0;
     margin: auto;
@@ -81,7 +81,7 @@ background-color: #181818;
   }
 #contact{
   position: absolute;
-  top:65rem;
+  top:90rem;
   left: 0;
   background-color:;
   height: 10rem;
@@ -94,12 +94,15 @@ i{
 
 #ph{
   position: absolute;
-  top:75rem;
+  top:97rem;
   left: 0;
   font-size: 3rem;
   color:white;
   height: 10rem;
   width:100vw;
+}
+#vid{
+  top:40rem;
 }
 
 #flogom{
@@ -179,6 +182,14 @@ width:100vw;
   color:white;
   height: 10rem;
   width:100vw;
+}
+header{
+  width: 100%;
+  color: white;
+  background-color: #191919;
+  text-align: center;
+  padding: 1em 0 1em 0;
+  margin-bottom: 100px;
 }
 
 .video-container video {
