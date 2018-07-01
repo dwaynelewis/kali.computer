@@ -5,7 +5,7 @@ body {
     width: 100vw;
     margin:  0 auto;
     font-family: Jura, Helvetica, sans-serif;
-  font-size: 1em;
+  font-size: 1rem;
 }
 #intro{
   height: 100vh;
@@ -183,14 +183,14 @@ width:100vw;
   height: 10rem;
   width:100vw;
 }
-header{
-  width: 100%;
-  color: white;
-  background-color: #191919;
-  text-align: center;
-  padding: 1em 0 1em 0;
-  margin-bottom: 100px;
+
+section{
+  position: absolute;
+  top:32rem;
+  width: 100vw;
+
 }
+
 
 .video-container video {
 display: block;
