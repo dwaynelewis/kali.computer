@@ -40,7 +40,7 @@ button{
   right:0;
   margin: 1px;
   position: absolute;
-  width: auto;
+  width: 10rem;
   color: white;
   font-size: 3rem;
 }
