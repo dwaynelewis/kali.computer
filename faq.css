@@ -45,6 +45,7 @@ button{
   font-size: 3rem;
 }
 #restart{
+  display: none;
   position: absolute;
   top:40rem;
   left:0;
@@ -118,19 +119,19 @@ button{
       top:36rem;
   }
   #choice1b{
-      top:40rem;
+      top:44rem;
   }
   #choice2a{
       top:36rem;
   }
   #choice2b{
-      top:40rem;
+      top:44rem;
   }
   #choice3a{
       top:36rem;
   }
   #choice3b{
-      top:40rem;
+      top:44rem;
   }
     #goodbye{
     display: none;
