@@ -14,14 +14,26 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
 
     <link rel="stylesheet" href="menu.css">
-    <script type="text/javascript">
-   $(document).ready(function() {
-      $().introtzikas();
-   });
-</script>
+
 </head>
 <body>
 
+    <div id="intro">
+
+
+
+                        	<div id="opvid" class="video-container">
+                        	  <video  autoplay muted playsinline>
+                        	    <source src="kaliad1.webm" type="video/webm">
+                        	      <source src="kaliad1.mp4" type="video/mp4">
+                        	      <source src="kaliad1.ogg" type="video/ogg">
+                        	  </video>
+                        	</div>
+
+                          <h4>ENTER</h4>
+
+</div>
+<div id="outro">
 
       <img id="sun" src="sun.png" class="intro animated zoomIn" alt="Kali logo">
 
@@ -29,7 +41,7 @@
       <img id="logom" src="kalilogor.png" class="intro animated zoomIn" alt="Kali logo">
 
 
-
+<!--
       		<div id="autoplay" >
 
       	 
@@ -40,7 +52,7 @@
 
       	<div class="textef">Monetize your brand</div>
 
-      	</div>
+      	</div> -->
 
 
       	<div class="time"><p id="time" ></p></div>
@@ -64,7 +76,7 @@
 </div>
 </div>
 <span style="cursor:pointer" onclick="openNav()">&#9776;</span>
-
+</div>
 
 </body>
 
@@ -76,8 +88,6 @@
 <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2/jquery.blast.js'></script>
 
 
-
-    <script  src="homepage.js"></script>
 
 
     <script type="text/javascript" src="textition.js"></script>
@@ -103,6 +113,37 @@
         }
         </script>
 
+
+                                 <script>
+                                 $(document).ready(function(){
+                                     $("h4").click(function(){
+                                         $(this).fadeOut();
+                                     });
+                                 });
+                                 </script>
+
+
+                                 <script> //INTRO
+                               $(document).ready(function(){
+                                   $("h4").click(function(){
+                                       $("#intro").delay(700).fadeOut("slow");
+                                       $("#outro").delay(1200).fadeIn("slow");
+                                   });
+                               });
+                               </script>
+
+<script>
+                                  	 //CLOCK
+                                  	var myVar = setInterval(function(){ myTimer() }, 1000);
+                                  	function myTimer() {
+                                  	    var d = new Date();
+                                  	    var t = d.toLocaleTimeString();
+                                  	    document.getElementById("time").innerHTML = t;
+                                  	}
+                                  	function myStopFunction() {
+                                  	    clearInterval(myVar);
+                                  	}
+                                    </script>
 
 </body>
 
