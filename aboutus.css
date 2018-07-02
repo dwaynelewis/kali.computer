@@ -97,6 +97,8 @@ nav#small img>a:hover {
 
 div#content {
   height: 2200px;
+  padding-left: 2em;
+  padding-right: 2rem;
   /* background: url('https://s-media-cache-ak0.pinimg.com/originals/03/95/6f/03956fed74537b3d7b0858e9a814748d.jpg')repeat 0 0; */
   opacity: 0.9;
 }
@@ -169,10 +171,14 @@ h3{
   font-size: 6rem;
   display: inline;
   color: white;
+  margin-right: 2rem;
 }
 
 
 p{
-  font-size: 2rem;
+  font-size: 3rem;
   display: inline;
+}
+article{
+  margin-top: 3rem;
 }
