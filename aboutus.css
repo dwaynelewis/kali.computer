@@ -10,7 +10,7 @@ body{
   background-color: #C80000;
 }
 nav {
-  background: #C80000;
+  background: #181818;
   overflow: auto;
   padding: 60px;
   position: relative;
@@ -165,9 +165,10 @@ div#content h2:before {
   }
 }
 
-h1{
+h3{
   font-size: 6rem;
   display: inline;
+  color: white;
 }
 
 
