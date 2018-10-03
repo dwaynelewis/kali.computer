@@ -51,12 +51,12 @@ $(window).on("load", function() {
 
         nav: true,
         navText: [
-                '<i class="fa fa-angle-left"></i>',
-                '<i class="fa fa-angle-right"></i>'
-            ],
+            '<i class="fa fa-angle-left"></i>',
+            '<i class="fa fa-angle-right"></i>'
+        ],
         items: 1,
         navSpeed: 400,
-        loop: true, 
+        loop: true,
         dots: true,
         autoplay: true,
         autoplayTimeout: 4000,
@@ -80,7 +80,7 @@ $(document).ready(function() {
             'textColor': '#f2f2f2',
             'bulletsColor': '#ccc',
             'position': 'right',
-            'tooltips': ['DUNE PHOTO STUDIO', 'PORTFOLIO', 'ABOUT', 'SERVICES', 'PRICES', 'BLOG', 'CONTACT']
+            'tooltips': ['KALI ADVERTISING', 'PORTFOLIO', 'ABOUT', 'SERVICES', 'PRICES', 'BLOG', 'CONTACT']
         }
     });
 
