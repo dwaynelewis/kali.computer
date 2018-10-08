@@ -26,23 +26,23 @@
 			[ END INDEX ]
 ================================================================================*/
 
-(function ($) {
+(function($) {
     'use strict';
 
 
     /*============ Full Screen Menu =============*/
     function fullscreenMenu() {
-        $('.imgmenu').each(function () {
-            $(this).on('mouseover', function () {
+        $('.imgmenu').each(function() {
+            $(this).on('mouseover', function() {
                 $(this).css('width', '34%').siblings('.imgmenu').css('width', '22%');
             });
-            $(this).on('mouseout', function () {
+            $(this).on('mouseout', function() {
                 $(this).css('width', '25%').siblings('.imgmenu').css('width', '25%');
             });
         });
     }
 
-    if( $(window).innerWidth() > 1199 ){
+    if ($(window).innerWidth() > 1199) {
         fullscreenMenu();
     }
 
@@ -53,12 +53,12 @@
     /*============ About Me Menu =============*/
     function aboutMeMenu() {
         var titleArr = [];
-        $('.about-me-block').each(function (index) {
+        $('.about-me-block').each(function(index) {
             var titlelist = $(this).data('title');
             titleArr.push(titlelist);
         });
 
-        $('.about-me-content-tab ul li').each(function (index) {
+        $('.about-me-content-tab ul li').each(function(index) {
             $(this).html(titleArr[index]);
         });
     }
@@ -67,7 +67,7 @@
 
 
 
-    
+
 
     /*============ Imagemenu =============*/
     function imageWrapMenu() {
@@ -78,7 +78,10 @@
 
         $('.imgmenu .imgmenu-content').removeAttr('href');
 
-        $('.imgmenu .imgmenu-content').on('click', function (e) {
+        $('.imgmenu .imgmenu-content').on('click', function(e) {
+
+            console.log('CLICK YO');
+
             var imgMenuTitle = $(this).data('hashlink-trigger');
 
             switch (imgMenuTitle) {
@@ -120,8 +123,11 @@
 
         });
 
-        $('.back-to-root-button').on('click', function () {
+        $('.back-to-root-button').on('click', function() {
             $(this).parents('.imgmenu-single-area').removeClass('is-active');
+
+            imageWrapMenu();
+
         });
 
     }
@@ -141,7 +147,7 @@
 
         $('.imgmenu2').removeAttr('href');
 
-        $('.imgmenu2').on('click', function () {
+        $('.imgmenu2').on('click', function() {
             var imgMenuTitle = $(this).data('hashlink-trigger');
 
             switch (imgMenuTitle) {
@@ -193,11 +199,11 @@
                     $('#portfolios-area').removeClass('is-active');
                     $('#blogs-area').removeClass('is-active');
                     break;
-                    
+
             }
         });
 
-        $('.back-to-root-button').on('click', function () {
+        $('.back-to-root-button').on('click', function() {
             $(this).parents('.imgmenu-single-area').removeClass('is-active');
         });
 
@@ -224,7 +230,7 @@
             var portfolioItemsMax = $('.single-portfolio.hidden').length;
             var portfoliotemsCount = 0;
 
-            $('.single-portfolio.hidden').each(function () {
+            $('.single-portfolio.hidden').each(function() {
                 if (portfoliotemsCount < portfolioPagination) {
                     $(this).removeClass('hidden');
                     portfoliotemsCount++;
@@ -242,7 +248,7 @@
             var portfolioItemsMax = $(portfolioSingleItem).length;
             var portfoliotemsCount = 0;
 
-            $(portfolioSingleItem).each(function () {
+            $(portfolioSingleItem).each(function() {
                 if (portfoliotemsCount >= portfolioPagination) {
                     $(this).addClass('hidden');
                 }
@@ -256,7 +262,7 @@
         }
 
         /*-- Function that Load items when Button is Click --*/
-        portfolioLoadMoreBtn.on('click', function (e) {
+        portfolioLoadMoreBtn.on('click', function(e) {
             portfolioShowNextItems(portfolioNextItems);
         });
 
@@ -271,11 +277,11 @@
 
 
     /*============ Blog Share Toggle =============*/
-    function blogShareToggle(){
+    function blogShareToggle() {
         var trigger = $('.blog-item-share-toggle');
         var container = $('.blog-item-social-links');
 
-        trigger.on('click', function(){
+        trigger.on('click', function() {
             $(this).toggleClass('is-active');
             $(this).parent().find(container).toggleClass('is-visible');
         });
@@ -287,25 +293,25 @@
 
 
     /*============ Team Member Content =============*/
-    function teamMemberContent(){
-        $('.team-member').on('mouseover', function(){
+    function teamMemberContent() {
+        $('.team-member').on('mouseover', function() {
             $(this).addClass('is-active').siblings().removeClass('is-active');
         });
     }
     teamMemberContent();
-    
+
 
 
 
 
 
     /*============ Full Screen Menu Dynamic =============*/
-    function fullScreenMenuDynamic(){
-        $('.fullscreen-menu-trigger').on('click', function(){
+    function fullScreenMenuDynamic() {
+        $('.fullscreen-menu-trigger').on('click', function() {
             $('.fullscreen-header').toggleClass('is-active');
         });
-        
-        $('.fsmenu ul li a').on('click', function (e) {
+
+        $('.fsmenu ul li a').on('click', function(e) {
             e.preventDefault();
             var imgMenuTitle = $(this).data('hashlink-trigger');
 
@@ -360,9 +366,9 @@
             }
 
         });
-        
 
-        $('.back-to-root-button').on('click', function () {
+
+        $('.back-to-root-button').on('click', function() {
             $('.fullscreen-header').removeClass('is-active');
         });
     }
@@ -373,14 +379,14 @@
 
 
     /*============ Progress Effect =============*/
-    $('.imgmenu-single-area').on('scroll', function(){
+    $('.imgmenu-single-area').on('scroll', function() {
 
-        $('.progress-bar').each(function(){
+        $('.progress-bar').each(function() {
 
             var progressBarPos = $('.progress-bar').offset().top;
             var winHeight = $(window).height();
-            
-            if(progressBarPos < (winHeight - (winHeight / 4) ) ){
+
+            if (progressBarPos < (winHeight - (winHeight / 4))) {
                 $('.progress-bar').addClass('slideInLeft');
             }
 
@@ -392,14 +398,14 @@
 
     /*============ Back to Top =============*/
     function scrollToTop() {
-        
+
         $('<button class="back-to-top-button"><i class="ti ti-angle-up"></i></button>').appendTo('.imgmenu-single-area');
         var trigger = $('.back-to-top-button');
         var wrapper = $('.imgmenu-single-area');
 
-        function scrollToTopAction(){
+        function scrollToTopAction() {
 
-            trigger.on('click', function(){
+            trigger.on('click', function() {
                 var findId = $(this).parent('.imgmenu-single-area').attr('id');
                 wrapper.animate({
                     scrollTop: $('#' + findId).offset().top
@@ -411,22 +417,22 @@
 
         trigger.removeClass('is-visible');
 
-        $('.imgmenu-single-area').each(function(){
+        $('.imgmenu-single-area').each(function() {
 
-            $(this).on('scroll', function(){
-                
+            $(this).on('scroll', function() {
+
                 var windowHeight = $(window).height();
-                
-                if( $(this).scrollTop() > windowHeight ){
+
+                if ($(this).scrollTop() > windowHeight) {
                     trigger.addClass('is-visible');
                 } else {
                     trigger.removeClass('is-visible');
                 }
-            
+
             });
-            
+
         });
-    
+
     }
     scrollToTop();
 
