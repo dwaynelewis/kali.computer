@@ -65,7 +65,66 @@
     aboutMeMenu();
 
 
+    function clickMenu() {
 
+        if ($('.imgmenu').length) {
+            $('.imgmenu').parents('html').css('overflow-y', 'hidden');
+        }
+
+        $('.imgmenu .imgmenu-content').removeAttr('href');
+
+        $('.imgmenu .imgmenu-content').on('click', function(e) {
+
+            console.log('CLICK YO');
+
+            var imgMenuTitle = $(this).data('hashlink-trigger');
+
+            switch (imgMenuTitle) {
+                case 'about-me-area':
+                    $('#about-me-area').addClass('is-active');
+                    $('#portfolios-area').removeClass('is-active');
+                    $('#blogs-area').removeClass('is-active');
+                    $('#contact-area').removeClass('is-active');
+                    break;
+
+                case 'portfolios-area':
+                    $('#portfolios-area').addClass('is-active');
+                    $('#about-me-area').removeClass('is-active');
+                    $('#blogs-area').removeClass('is-active');
+                    $('#contact-area').removeClass('is-active');
+                    break;
+
+                case 'blogs-area':
+                    $('#blogs-area').addClass('is-active');
+                    $('#about-me-area').removeClass('is-active');
+                    $('#portfolios-area').removeClass('is-active');
+                    $('#contact-area').removeClass('is-active');
+                    break;
+
+                case 'contact-area':
+                    $('#contact-area').addClass('is-active');
+                    $('#about-me-area').removeClass('is-active');
+                    $('#portfolios-area').removeClass('is-active');
+                    $('#blogs-area').removeClass('is-active');
+                    break;
+
+                default:
+                    $('#contact-area').removeClass('is-active');
+                    $('#about-me-area').removeClass('is-active');
+                    $('#portfolios-area').removeClass('is-active');
+                    $('#blogs-area').removeClass('is-active');
+                    break;
+            }
+
+        });
+
+        $('.back-to-root-button').on('click', function() {
+            $(this).parents('.imgmenu-single-area').removeClass('is-active');
+
+            imageWrapMenu();
+
+        });
+    }
 
 
 
